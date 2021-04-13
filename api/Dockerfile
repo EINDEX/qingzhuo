@@ -13,7 +13,7 @@ RUN CGO_ENABLED=0 go build -ldflags "-s -w" -o server
 
 FROM scratch AS RUNNER
 
-COPY --from=BUILDER /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+COPY --from=BUILDER /usr/share/zoneinfo /usr/share/zoneinfo
 COPY --from=BUILDER /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 COPY --from=BUILDER /app/server /app/

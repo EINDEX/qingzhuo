@@ -4,6 +4,8 @@ services:
         image: ghcr.io/eindex/qing-zhuo/web:${VERSION}
         ports:
             - 8888:80
+        depends_on:
+            - api
     api:
         image: ghcr.io/eindex/qing-zhuo/api:${VERSION}
         environment:

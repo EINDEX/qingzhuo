@@ -3,6 +3,8 @@ services:
     web:
         image: ghcr.io/eindex/qing-zhuo/web:${VERSION}
         build: ./web
+        depends_on:
+            - api
     api:
         image: ghcr.io/eindex/qing-zhuo/api:${VERSION}
         build: ./api
