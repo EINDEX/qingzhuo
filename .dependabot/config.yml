@@ -5,7 +5,7 @@ update_configs:
   - package_manager: "javascript"
     directory: "/web"
     update_schedule: "live"
-    target_branch: "dependabot"
+    target_branch: "main"
     default_labels:
       - "dependencies"
       - "dependabot"
@@ -15,7 +15,7 @@ update_configs:
   - package_manager: "go:modules"
     directory: "/api"
     update_schedule: "daily"
-    target_branch: "dependabot"
+    target_branch: "main"
     default_labels:
       - "dependencies"
       - "dependabot"
