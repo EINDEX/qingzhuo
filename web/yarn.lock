@@ -1383,10 +1383,10 @@ vue-router@^4.0.6:
   resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-4.0.6.tgz#91750db507d26642f225b0ec6064568e5fe448d6"
   integrity sha1-kXUNtQfSZkLyJbDsYGRWjl/kSNY=
 
-vue-tsc@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.npm.taobao.org/vue-tsc/download/vue-tsc-0.0.15.tgz?cache=0&sync_timestamp=1618037569624&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-tsc%2Fdownload%2Fvue-tsc-0.0.15.tgz"
-  integrity sha1-KVHwR5vwuWbIKHSJJ+jqW4KhUHA=
+vue-tsc@^0.0.25:
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-0.0.25.tgz#80852b731ff9bf8dc4d1193a524e1cc06e58e9cd"
+  integrity sha512-9cWIQxjoviLQE2o+8NVfycKeI6nlfPndTDvH9hhG2/5mQhixPYWzXgAjszLXa8pzLKnF3ZiAr/hrTxjIAai5+A==
   dependencies:
     unzipper "0.10.11"
 
