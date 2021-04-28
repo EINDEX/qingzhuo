@@ -52,10 +52,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@types/node@^14.14.37":
-  version "14.14.37"
-  resolved "https://registry.npmjs.org/@types/node/-/node-14.14.37.tgz"
-  integrity sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
+"@types/node@^15.0.1":
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.1.tgz#ef34dea0881028d11398be5bf4e856743e3dc35a"
+  integrity sha512-TMkXt0Ck1y0KKsGr9gJtWGjttxlZnnvDtphxUOSd0bfaR6Q1jle+sPvrzNR1urqYTWMinoKvjKfXUGsumaO1PA==
 
 "@vitejs/plugin-vue@^1.2.1":
   version "1.2.1"
