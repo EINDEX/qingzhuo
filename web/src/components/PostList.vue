@@ -29,19 +29,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-
-type PostItem = {
-  slug: string;
-  title: string;
-  content: string;
-  html: string;
-};
+import { PostListType } from '/@/types/API';
 
 export default defineComponent({
   name: 'PostList',
   data() {
     return {
-      postItems: [] as PostItem[],
+      postItems: [] as PostListType,
     };
   },
   setup() {},

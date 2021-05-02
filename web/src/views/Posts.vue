@@ -1,30 +1,21 @@
 <template>
-  <article class="py-12 divide-y h-full">
-    <header class="py-6">
-      <h1 class="text-3xl leading-8 font-bold tracking-tight text-gray-900">{{ blog.title }}</h1>
-    </header>
-    <content class="py-6 h-auto prose" v-html="blog.html"></content>
-  </article>
+  <post-page :title="blog.title"><div v-html="blog.html"></div></post-page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-
-type Post = {
-  slug: String;
-  title: String;
-  content: String;
-  html: String;
-};
+import PostPage from '/@/components/PostPage.vue';
+import PostType from '/@/types/API';
 
 export default defineComponent({
+  components: { PostPage },
   setup() {},
   props: {
     slug: String,
   },
   data() {
     return {
-      blog: {} as Post,
+      blog: {} as PostType,
     };
   },
   async mounted() {

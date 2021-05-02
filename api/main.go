@@ -84,7 +84,7 @@ func main() {
 			})
 			posts.GET("", func(c *gin.Context) {
 				var posts []Post
-				DB.Find(&posts).Order("updated_at desc")
+				DB.Find(&posts).Order("created_at desc")
 				for i := range posts {
 					posts[i].HTML = MarkdownRender(posts[i].Content)
 				}
@@ -115,6 +115,27 @@ func main() {
 					return
 				}
 				c.JSON(200, "success")
+			})
+		}
+		archives := api.Group("archives")
+		{
+			archives.GET("", func(c *gin.Context) {
+				var posts []Post
+				DB.Select("created_at, slug, title").Find(&posts).Order("created_at desc")
+				for i := range posts {
+					posts[i].HTML = MarkdownRender(posts[i].Content)
+				}
+				postByYear := make(map[int][]Post)
+				for _, post := range posts {
+					year := post.CreatedAt.Year()
+					postsInYear, ok := postByYear[year]
+					if !ok {
+						postsInYear = make([]Post, 0)
+					}
+					postsInYear = append(postsInYear, post)
+					postByYear[year] = postsInYear
+				}
+				c.JSON(200, postByYear)
 			})
 		}
 	}

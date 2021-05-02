@@ -11,16 +11,25 @@
               <div class="flex flex-col items-start justify-between leading-6 h-full">
                 <a
                   href="https://weibo.com/snowstarlbk"
+                  target="_blank"
                   class="flex align-middle flex-row h-6 gap-1"
                 >
                   <img class="h-5 w-5" src="/@/assets/weibo.svg" />
                   Weibo
                 </a>
-                <a href="https://github.com/eindex" class="flex align-middle flex-row h-6 gap-1">
+                <a
+                  href="https://github.com/eindex"
+                  target="_blank"
+                  class="flex align-middle flex-row h-6 gap-1"
+                >
                   <img class="h-5 w-5" src="/@/assets/github.svg" />
                   Github
                 </a>
-                <a href="mailto:eindex.me@outlook.com" class="flex align-middle flex-row h-6 gap-1">
+                <a
+                  href="mailto:eindex.me@outlook.com"
+                  target="_blank"
+                  class="flex align-middle flex-row h-6 gap-1"
+                >
                   <img class="h-6 w-5" src="/@/assets/icon-mail.svg" />
                   Email
                 </a>

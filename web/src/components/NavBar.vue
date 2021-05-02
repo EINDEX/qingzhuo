@@ -39,9 +39,7 @@ export default defineComponent({
   setup() {},
   data() {
     return {
-      left: [
-        //   { name: 'Home', link: '/' }
-      ],
+      left: [{ name: 'Archive', link: '/archive' }],
       right: [{ name: 'About Me', link: '/about' }],
     };
   },
