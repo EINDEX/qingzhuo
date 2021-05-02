@@ -2,7 +2,7 @@
   <div class="divide-y divide-gray-200">
     <ul class="divide-y divide-gray-200" :key="post.slug" v-for="post in postItems">
       <li class="py-12">
-        <article class="space-y-3 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+        <article class="space-y-3">
           <div>
             <h2
               class="text-2xl font-bold tracking-tight text-gray-900"
@@ -12,10 +12,14 @@
             </h2>
           </div>
           <div>
-            <content class="prose max-w-none text-gray-600" v-html="post.content"></content>
+            <content class="prose max-w-none text-gray-600" v-html="post.html"></content>
           </div>
-          <div class="text-base leading-6 font-medium">
-            <a class="text-teal-500 hover:text-teal-600" :href="postURL(post.slug)">Read more →</a>
+          <div class="text-base leading-4 font-medium">
+            <a
+              class="text-teal-500 hover:text-teal-600 hover:bg-gray-700 hover:text-white -mx-2 px-2 py-2 rounded-md"
+              :href="postURL(post.slug)"
+              >Read more →</a
+            >
           </div>
         </article>
       </li>
@@ -30,6 +34,7 @@ type PostItem = {
   slug: string;
   title: string;
   content: string;
+  html: string;
 };
 
 export default defineComponent({

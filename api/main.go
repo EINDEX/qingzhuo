@@ -1,12 +1,15 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"os"
 	"time"
 
 	"github.com/eindex/qing-zhuo/api/premissions"
 	"github.com/gin-gonic/gin"
+	"github.com/yuin/goldmark"
+	"github.com/yuin/goldmark/util"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -16,6 +19,7 @@ type Post struct {
 	Slug        string         `json:"slug" gorm:"type:varchar(128);uniqueIndex"`
 	Title       string         `json:"title" gorm:"type:varchar(256)"`
 	Content     string         `json:"content"`
+	HTML        string         `gorm:"-" json:"html"`
 	IsPublished bool           `json:"is_published"`
 	CreatedAt   time.Time      `json:"created_at"`
 	UpdatedAt   time.Time      `json:"updated_at"`
@@ -38,6 +42,15 @@ func (p *CreateUpdatePostRequest) getPost() *Post {
 	}
 }
 
+func MarkdownRender(markdown string) (html string) {
+	var buf bytes.Buffer
+	if err := goldmark.Convert(util.StringToReadOnlyBytes(markdown), &buf); err != nil {
+		return
+	}
+	html = buf.String()
+	return
+}
+
 func main() {
 	dsn := os.Getenv("DSN")
 	DB, _ := gorm.Open(mysql.Open(dsn))
@@ -56,12 +69,15 @@ func main() {
 			posts.GET(":slug", func(c *gin.Context) {
 				var post Post
 				DB.First(&post, "slug = ?", c.Param("slug"))
+				post.HTML = MarkdownRender(post.Content)
 				c.JSON(200, post)
-
 			})
 			posts.GET("", func(c *gin.Context) {
 				var posts []Post
-				DB.Find(&posts)
+				DB.Find(&posts).Order("updated_at desc")
+				for i := range posts {
+					posts[i].HTML = MarkdownRender(posts[i].Content)
+				}
 				c.JSON(200, posts)
 			})
 			posts.POST("", premissions.PremissionCheck(premissions.POST_EDITOR), func(c *gin.Context) {

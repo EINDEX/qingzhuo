@@ -3,9 +3,7 @@
     <header class="py-6">
       <h1 class="text-3xl leading-8 font-bold tracking-tight text-gray-900">{{ blog.title }}</h1>
     </header>
-    <main class="py-6 h-auto prose lg:prose-xl">
-      {{ blog.content }}
-    </main>
+    <content class="py-6 h-auto prose" v-html="blog.html"></content>
   </article>
 </template>
 
@@ -16,6 +14,7 @@ type Post = {
   slug: String;
   title: String;
   content: String;
+  html: String;
 };
 
 export default defineComponent({
