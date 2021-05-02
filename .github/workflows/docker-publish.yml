@@ -46,10 +46,10 @@ jobs:
 
           echo VERSION=$VERSION
           VERSION=$VERSION docker-compose --file docker-compose.build.yml build
-          VERSION=$VERSION docker-compose --file docker-compose.yml push
+          VERSION=$VERSION docker-compose --file docker-compose.build.yml push
       
           if [ "$VERSION" != "staging" ]; then
             echo "latest"
-            VERSION=latest docker-compose --file docker-compose.yml build
-            VERSION=latest docker-compose --file docker-compose.yml push
+            VERSION=latest docker-compose --file docker-compose.build.yml build
+            VERSION=latest docker-compose --file docker-compose.build.yml push
           fi
