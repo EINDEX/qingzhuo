@@ -5,14 +5,15 @@ import (
 	"os"
 	"time"
 
+	"github.com/eindex/qing-zhuo/api/premissions"
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
 type Post struct {
-	ID          uint64         `json:"id" gorm:"primaryKey,autoIncrement"`
-	Slug        string         `json:"slug" gorm:"uniqueIndex,type:varchar(128)"`
+	ID          uint64         `json:"id" gorm:"primaryKey;autoIncrement"`
+	Slug        string         `json:"slug" gorm:"type:varchar(128);uniqueIndex"`
 	Title       string         `json:"title" gorm:"type:varchar(256)"`
 	Content     string         `json:"content"`
 	IsPublished bool           `json:"is_published"`
@@ -48,7 +49,7 @@ func main() {
 
 	router := gin.Default()
 
-	api := router.Group("api")
+	api := router.Group("api", premissions.PremissionApplyMiddleware())
 	{
 		posts := api.Group("posts")
 		{
@@ -63,7 +64,7 @@ func main() {
 				DB.Find(&posts)
 				c.JSON(200, posts)
 			})
-			posts.POST("", func(c *gin.Context) {
+			posts.POST("", premissions.PremissionCheck(premissions.POST_EDITOR), func(c *gin.Context) {
 				var postRequest CreateUpdatePostRequest
 				if err := c.BindJSON(&postRequest); err != nil {
 					c.JSON(400, err)
@@ -76,14 +77,14 @@ func main() {
 				}
 				c.JSON(200, "success")
 			})
-			posts.PUT(":slug", func(c *gin.Context) {
+			posts.PUT(":slug", premissions.PremissionCheck(premissions.POST_EDITOR), func(c *gin.Context) {
 				var postRequest CreateUpdatePostRequest
 				if err := c.BindJSON(&postRequest); err != nil {
 					c.JSON(400, err)
 					return
 				}
 				post := postRequest.getPost()
-				if err := DB.Create(&post).Error; err != nil {
+				if err := DB.Save(&post).Error; err != nil {
 					c.JSON(400, err)
 					return
 				}

@@ -1,5 +1,7 @@
 <template>
-  <post-list></post-list>
+  <main>
+    <post-list></post-list>
+  </main>
 </template>
 
 <script lang="ts">
