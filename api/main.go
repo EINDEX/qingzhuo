@@ -9,6 +9,7 @@ import (
 	"github.com/eindex/qing-zhuo/api/premissions"
 	"github.com/gin-gonic/gin"
 	"github.com/yuin/goldmark"
+	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/util"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -42,9 +43,18 @@ func (p *CreateUpdatePostRequest) getPost() *Post {
 	}
 }
 
+var md = goldmark.New(
+	goldmark.WithExtensions(
+		extension.GFM,
+		extension.Footnote,
+		extension.TaskList,
+	),
+)
+
 func MarkdownRender(markdown string) (html string) {
+
 	var buf bytes.Buffer
-	if err := goldmark.Convert(util.StringToReadOnlyBytes(markdown), &buf); err != nil {
+	if err := md.Convert(util.StringToReadOnlyBytes(markdown), &buf); err != nil {
 		return
 	}
 	html = buf.String()
