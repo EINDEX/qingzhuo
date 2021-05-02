@@ -1,12 +1,14 @@
 version: "3.1"
 services:
-    web:
-        image: ghcr.io/eindex/qing-zhuo/web:${VERSION}
-        build: ./web
-        depends_on:
-            - api
-    api:
-        image: ghcr.io/eindex/qing-zhuo/api:${VERSION}
-        build: ./api
-
-        
+  web:
+    image: ghcr.io/eindex/qing-zhuo/web:${VERSION}
+    build: ./web
+    depends_on:
+      - api
+    labels:
+      - org.opencontainers.image.source="https://github.com/EINDEX/qing-zhuo"
+  api:
+    image: ghcr.io/eindex/qing-zhuo/api:${VERSION}
+    build: ./api
+    labels:
+      - org.opencontainers.image.source="https://github.com/EINDEX/qing-zhuo"
