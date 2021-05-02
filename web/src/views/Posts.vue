@@ -1,5 +1,5 @@
 <template>
-  <article class="py-12 divide-y">
+  <article class="py-12 divide-y h-full">
     <header class="py-6">
       <h1 class="text-3xl leading-8 font-bold tracking-tight text-gray-900">{{ blog.title }}</h1>
     </header>

@@ -1,16 +1,16 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen h-screen">
     <nav-bar class="h-auto" />
     <header class="shadow h-auto">
       <!-- <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
       <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
     </div> -->
     </header>
-    <main class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0 h-full">
-      <router-view class="h-full" />
+    <main class="max-w-3xl mx-auto px-4 h-auto">
+      <router-view />
     </main>
 
-    <blog-footer />
+    <blog-footer class="h-auto" />
   </div>
 </template>
 
