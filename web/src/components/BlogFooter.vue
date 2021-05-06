@@ -8,15 +8,7 @@
           <div class="flex flex-row gap-4">
             <img class="h-24 rounded-2xl" src="/@/assets/avatar.png" />
             <div class="col-start-4">
-              <div class="flex flex-col items-start justify-between leading-6 h-full">
-                <a
-                  href="https://weibo.com/snowstarlbk"
-                  target="_blank"
-                  class="flex align-middle flex-row h-6 gap-1"
-                >
-                  <img class="h-5 w-5" src="/@/assets/weibo.svg" />
-                  Weibo
-                </a>
+              <div class="flex flex-col items-start justify-around leading-6 h-full">
                 <a
                   href="https://github.com/eindex"
                   target="_blank"
