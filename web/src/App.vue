@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen h-screen">
+  <div class="h-screen">
     <nav-bar class="h-auto" />
     <header class="shadow h-auto">
       <!-- <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -35,5 +35,9 @@ export default defineComponent({
     Noto Color Emoji;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+main {
+  min-height: 80%;
 }
 </style>
