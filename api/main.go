@@ -15,6 +15,8 @@ import (
 	"gorm.io/gorm"
 )
 
+const CUT_SIZE int = 270
+
 type Post struct {
 	ID          uint64         `json:"id" gorm:"primaryKey;autoIncrement"`
 	Slug        string         `json:"slug" gorm:"type:varchar(128);uniqueIndex"`
@@ -61,6 +63,13 @@ func MarkdownRender(markdown string) (html string) {
 	return
 }
 
+func Summary(content string) string {
+	if len(content) > CUT_SIZE {
+		content = content[:CUT_SIZE] + "\n ..."
+	}
+	return content
+}
+
 func main() {
 	dsn := os.Getenv("DSN")
 	DB, _ := gorm.Open(mysql.Open(dsn))
@@ -84,9 +93,9 @@ func main() {
 			})
 			posts.GET("", func(c *gin.Context) {
 				var posts []Post
-				DB.Find(&posts).Order("created_at desc")
+				DB.Order("created_at desc").Find(&posts)
 				for i := range posts {
-					posts[i].HTML = MarkdownRender(posts[i].Content)
+					posts[i].HTML = MarkdownRender(Summary(posts[i].Content))
 				}
 				c.JSON(200, posts)
 			})
@@ -121,7 +130,7 @@ func main() {
 		{
 			archives.GET("", func(c *gin.Context) {
 				var posts []Post
-				DB.Select("created_at, slug, title").Find(&posts).Order("created_at desc")
+				DB.Select("created_at, slug, title").Order("created_at desc").Find(&posts)
 				for i := range posts {
 					posts[i].HTML = MarkdownRender(posts[i].Content)
 				}
