@@ -1,0 +1,55 @@
+name: Docker
+
+on:
+  push:
+    # Publish `main` as Docker `staging` image.
+    branches:
+      - main
+
+    # Publish `v1.2.3` && latest tags as releases.
+    tags:
+      - v*
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build image
+        run: VERSION=test docker-compose --file docker-compose.build.yml build --parallel
+    
+
+  build-push:
+    needs: [test]
+
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Build & Push image
+        run: |
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          # Use Docker `staging` tag convention
+          [ "$VERSION" == "main" ] && VERSION=staging
+
+          echo VERSION=$VERSION
+          VERSION=$VERSION docker-compose --file docker-compose.build.yml build
+          VERSION=$VERSION docker-compose --file docker-compose.build.yml push
+      
+          if [ "$VERSION" != "staging" ]; then
+            echo "latest"
+            VERSION=latest docker-compose --file docker-compose.build.yml build
+            VERSION=latest docker-compose --file docker-compose.build.yml push
+          fi

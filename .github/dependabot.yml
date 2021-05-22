@@ -1,0 +1,24 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/web"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  target-branch: main
+  assignees:
+  - EINDEX
+  labels:
+  - dependencies
+  - dependabot
+- package-ecosystem: gomod
+  directory: "/api"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  target-branch: main
+  assignees:
+  - EINDEX
+  labels:
+  - dependencies
+  - dependabot
