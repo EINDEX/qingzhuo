@@ -2,3 +2,4 @@
 docker-compose.online.yml
 __debug_bin
 .vscode
+.idea
