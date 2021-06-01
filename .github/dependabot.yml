@@ -1,24 +1,28 @@
 version: 2
+
 updates:
-- package-ecosystem: npm
+- package-ecosystem: "npm"
   directory: "/web"
   schedule:
-    interval: weekly
-  open-pull-requests-limit: 10
-  target-branch: main
+    interval: "daily"
+    time: "09:00"
+    timezone: "Asia/Shanghai"
+  open-pull-requests-limit: 0
+  target-branch: "dependency"
   assignees:
-  - EINDEX
+  - "EINDEX"
   labels:
-  - dependencies
-  - dependabot
-- package-ecosystem: gomod
+  - "dependencies"
+
+- package-ecosystem: "gomod"
   directory: "/api"
   schedule:
-    interval: weekly
-  open-pull-requests-limit: 10
-  target-branch: main
+    interval: "daily"
+    time: "09:00"
+    timezone: "Asia/Shanghai"
+  open-pull-requests-limit: 0
+  target-branch: "dependency"
   assignees:
-  - EINDEX
+  - "EINDEX"
   labels:
-  - dependencies
-  - dependabot
+  - "dependencies"
