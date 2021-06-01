@@ -1,18 +1,18 @@
 package http
 
 import (
-	"github.com/eindex/qing-zhuo/api/delivery/http/middleware"
 	"github.com/eindex/qing-zhuo/api/domain"
+	"github.com/eindex/qing-zhuo/api/post/delivery/http/middleware"
 	"github.com/gin-gonic/gin"
 )
 
 type PostHandler struct {
-	PostUseCase domain.PostUseCase
+	PostUsecase domain.PostUsecase
 }
 
-func NewPostHandler(rg *gin.RouterGroup, us domain.PostUseCase) {
+func NewPostHandler(rg *gin.RouterGroup, us domain.PostUsecase) {
 	handler := &PostHandler{
-		PostUseCase: us,
+		PostUsecase: us,
 	}
 	rg.GET(":slug", handler.GetBySlug)
 	rg.GET("", handler.FetchPost)
@@ -21,42 +21,40 @@ func NewPostHandler(rg *gin.RouterGroup, us domain.PostUseCase) {
 }
 
 func (p *PostHandler) FetchPost(c *gin.Context) {
-	var posts []Post
-	DB.Order("created_at desc").Find(&posts)
-	for i := range posts {
-		posts[i].HTML = MarkdownRender(Summary(posts[i].Content))
+	posts, nextCursor, err := p.PostUsecase.Fetch(c, "", 100)
+	if err != nil {
+		return
 	}
-	c.JSON(200, posts)
+	c.JSON(200, gin.H{"data": posts, "next_cursor": nextCursor})
 }
 func (p *PostHandler) GetBySlug(c *gin.Context) {
-	var post Post
-	DB.First(&post, "slug = ?", c.Param("slug"))
-	post.HTML = MarkdownRender(post.Content)
+	post, err := p.PostUsecase.GetBySlug(c, c.Param("slug"))
+	if err != nil {
+		return
+	}
 	c.JSON(200, post)
 }
 func (p *PostHandler) Store(c *gin.Context) {
-	var postRequest domain.CreateUpdatePostRequest
+	var postRequest domain.Post
 	if err := c.BindJSON(&postRequest); err != nil {
 		c.JSON(400, err)
 		return
 	}
-	post := postRequest.getPost()
-	if err := DB.Create(&post).Error; err != nil {
-		c.JSON(400, err)
+	if err := p.PostUsecase.Store(c, &postRequest); err != nil {
+		c.JSON(500, "server error")
 		return
 	}
 	c.JSON(200, "success")
 }
 
 func (p *PostHandler) UpdateBySlug(c *gin.Context) {
-	var postRequest domain.CreateUpdatePostRequest
+	var postRequest domain.Post
 	if err := c.BindJSON(&postRequest); err != nil {
 		c.JSON(400, err)
 		return
 	}
-	post := postRequest.getPost()
-	if err := DB.Save(&post).Error; err != nil {
-		c.JSON(400, err)
+	if err := p.PostUsecase.UpdateBySlug(c, c.Param("slug"), &postRequest); err != nil {
+		c.JSON(500, "server error")
 		return
 	}
 	c.JSON(200, "success")
