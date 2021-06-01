@@ -21,14 +21,16 @@ type Post struct {
 type PostUsecase interface {
 	Fetch(ctx context.Context, cursor string, num int) (posts []Post, nextCursor string, err error)
 	GetBySlug(ctx context.Context, slug string) (*Post, error)
-	Store(ctx context.Context, post *Post) error
-	UpdateBySlug(ctx context.Context, slug string, post *Post) error
+	Store(ctx context.Context, post *Post) (err error)
+	UpdateBySlug(ctx context.Context, slug string, post *Post) (err error)
+	FetchArchive(ctx context.Context) (posts []Post, err error)
 }
 
 type PostRepository interface {
 	Fetch(ctx context.Context, cursor string, num int) ([]Post, error)
 	NextCursor(ctx context.Context, slug string) (string, error)
 	GetBySlug(ctx context.Context, slug string) (*Post, error)
-	Store(ctx context.Context, post *Post) error
-	UpdateBySlug(ctx context.Context, slug string, post *Post) error
+	Store(ctx context.Context, post *Post) (err error)
+	UpdateBySlug(ctx context.Context, slug string, post *Post) (err error)
+	FetchArchive(ctx context.Context) (posts []Post, err error)
 }

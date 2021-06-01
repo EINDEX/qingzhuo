@@ -1,4 +1,4 @@
-package usercase
+package usecase
 
 import (
 	"bytes"
@@ -59,6 +59,10 @@ func (p *postUsecase) Store(ctx context.Context, post *domain.Post) error {
 
 func (p *postUsecase) UpdateBySlug(ctx context.Context, slug string, post *domain.Post) error {
 	return p.postRepo.UpdateBySlug(ctx, slug, post)
+}
+
+func (p *postUsecase) FetchArchive(ctx context.Context) (posts []domain.Post, err error) {
+	return p.postRepo.FetchArchive(ctx)
 }
 
 func MarkdownRender(markdown string) (html string) {

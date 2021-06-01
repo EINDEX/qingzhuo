@@ -15,10 +15,8 @@ func NewMysqlPostRepository(Conn *gorm.DB) domain.PostRepository {
 }
 
 func (m mysqlPostRepository) Fetch(ctx context.Context, cursor string, num int) (posts []domain.Post, err error) {
-	if err := m.Conn.Order("created_at desc").Find(&posts).Error; err != nil {
-		return nil, err
-	}
-	return posts, nil
+	err = m.Conn.Order("created_at desc").Limit(num).Find(&posts).Error
+	return
 }
 
 func (m mysqlPostRepository) NextCursor(ctx context.Context, slug string) (string, error) {
@@ -32,15 +30,16 @@ func (m *mysqlPostRepository) GetBySlug(ctx context.Context, slug string) (post 
 }
 
 func (m mysqlPostRepository) Store(ctx context.Context, post *domain.Post) (err error) {
-	if err = m.Conn.Create(post).Error; err != nil {
-		return
-	}
+	err = m.Conn.Create(post).Error
 	return
 }
 
 func (m mysqlPostRepository) UpdateBySlug(ctx context.Context, slug string, post *domain.Post) (err error) {
-	if err = m.Conn.Model(&domain.Post{}).Where("slug = ?", slug).Omit("id").Updates(post).Error; err != nil {
-		return
-	}
+	err = m.Conn.Model(&domain.Post{}).Where("slug = ?", slug).Omit("id").Updates(post).Error
+	return
+}
+
+func (m mysqlPostRepository) FetchArchive(ctx context.Context) (posts []domain.Post, err error) {
+	err = m.Conn.Select("created_at, slug, title").Order("created_at desc").Find(&posts).Error
 	return
 }

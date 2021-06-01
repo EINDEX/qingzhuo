@@ -1,3 +1,5 @@
 frontend
 .env
 .vscode
+config.toml
+server

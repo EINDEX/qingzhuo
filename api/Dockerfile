@@ -8,7 +8,7 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 go build -ldflags "-s -w" -o server
+RUN CGO_ENABLED=0 go build -ldflags "-s -w" -o server app/main.go
 
 
 FROM scratch AS RUNNER
