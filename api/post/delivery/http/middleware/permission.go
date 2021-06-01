@@ -1,10 +1,9 @@
 package middleware
 
 import (
-	"net/http"
-	"os"
-
 	"github.com/gin-gonic/gin"
+	"github.com/spf13/viper"
+	"net/http"
 )
 
 type Permission string
@@ -16,7 +15,7 @@ const (
 func PermissionApplyMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		key := c.GetHeader("X-Api-Key")
-		if key != os.Getenv("API_KEY") {
+		if key != viper.GetString("server.api_key") {
 			c.Next()
 			return
 		}
