@@ -8,7 +8,7 @@ updates:
     time: "09:00"
     timezone: "Asia/Shanghai"
   open-pull-requests-limit: 0
-  target-branch: "dependency"
+  target-branch: "main"
   assignees:
   - "EINDEX"
   labels:
@@ -21,7 +21,7 @@ updates:
     time: "09:00"
     timezone: "Asia/Shanghai"
   open-pull-requests-limit: 0
-  target-branch: "dependency"
+  target-branch: "main"
   assignees:
   - "EINDEX"
   labels:
