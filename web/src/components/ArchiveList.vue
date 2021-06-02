@@ -20,44 +20,37 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-
-type ArchiveItem = {
-  slug: string;
-  title: string;
-  created_at: string;
-};
-
-type ArchiveItemsByYear = {
-  [year: number]: ArchiveItem[];
-};
+import {defineComponent} from 'vue';
+import {ArchiveList} from '../types/API';
 
 export default defineComponent({
-  name: 'PostList',
-  data() {
-    return {
-      archivesByYears: {} as ArchiveItemsByYear,
-    };
-  },
-  setup() {},
-  async mounted() {
-    try {
-      const postsResp = await this.axios.get('api/archives');
-      if (postsResp.status == 200) {
-        this.archivesByYears = postsResp.data;
-      }
-    } catch (error) {}
-  },
-  methods: {
-    jumpToPost(slug: string) {
-      this.$router.push(this.postURL(slug));
+    name: 'ArchiveList',
+    setup() {},
+    data() {
+      return {
+        archives: [] as ArchiveList,
+      };
     },
-    postURL(slug: string): string {
-      return `/posts/${slug}`;
+    async mounted() {
+      try {
+        const postsResp = await this.axios.get('api/archives');
+        if (postsResp.status == 200) {
+          this.archives = postsResp.data.data;
+        }
+      } catch (error) {}
     },
-    archiveYears(): string[] {
-      return Object.keys(this.archivesByYears).sort().reverse();
+    methods: {
+      jumpToPost(slug: string) {
+        this.$router.push(this.postURL(slug));
+      },
+      postURL(slug: string): string {
+        return `/posts/${slug}`;
+      },
+      archiveYears(): string[] {
+        for (let archive in this.archives) {
+        }
+        Object.keys(this.archivesByYears).sort().reverse();
+      },
     },
-  },
-});
+  });
 </script>

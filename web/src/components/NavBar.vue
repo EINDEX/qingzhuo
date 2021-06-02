@@ -9,22 +9,42 @@
             </a>
           </div>
           <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-4" :key="item.link" v-for="item in left">
+            <div v-for="item in left" :key="item.link" class="ml-10 flex items-baseline space-x-4">
               <router-link
-                class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="
+                  text-gray-700
+                  hover:bg-gray-700
+                  hover:text-white
+                  px-3
+                  py-2
+                  rounded-md
+                  text-sm
+                  font-medium
+                "
                 :to="item.link"
-                >{{ item.name }}</router-link
               >
+                {{ item.name }}
+              </router-link>
             </div>
           </div>
         </div>
         <div class="hidden md:block">
-          <div class="ml-4 flex items-center md:ml-6" :key="item.link" v-for="item in right">
+          <div v-for="item in right" :key="item.link" class="ml-4 flex items-center md:ml-6">
             <router-link
-              class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              class="
+                text-gray-700
+                hover:bg-gray-700
+                hover:text-white
+                px-3
+                py-2
+                rounded-md
+                text-sm
+                font-medium
+              "
               :to="item.link"
-              >{{ item.name }}</router-link
             >
+              {{ item.name }}
+            </router-link>
           </div>
         </div>
       </div>
@@ -33,15 +53,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import {defineComponent} from 'vue';
 
 export default defineComponent({
-  setup() {},
-  data() {
-    return {
-      left: [{ name: 'Archive', link: '/archive' }],
-      right: [{ name: 'About Me', link: '/about' }],
-    };
-  },
-});
+    setup() {},
+    data() {
+      return {
+        left: [{ name: 'Archive', link: '/archive' }],
+        right: [{ name: 'About Me', link: '/about' }],
+      };
+    },
+  });
 </script>
