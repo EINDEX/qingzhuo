@@ -686,6 +686,7 @@
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.0.0-beta.11.tgz#4fb4161ee41ba75f3f5198d4bfd80e4ffb7f2462"
   integrity sha512-vpw61AkW9U8c2upjJCljHq9eh1KkD4FJ7DYbRzIETpj9WAw2VESudJZosAk4M+7npBo1Zu1jNQY03HUMVO/czQ==
 
+
 "@vue/eslint-config-prettier@^6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@vue/eslint-config-prettier/-/eslint-config-prettier-6.0.0.tgz#ad5912b308f4ae468458e02a2b05db0b9d246700"
@@ -4914,6 +4915,7 @@ vscode-json-languageservice@^4.1.4:
   version "4.1.4"
   resolved "https://registry.nlark.com/vscode-json-languageservice/download/vscode-json-languageservice-4.1.4.tgz#c83d3d812f8f17ab525724c611d8ff5e8834fc84"
   integrity sha1-yD09gS+PF6tSVyTGEdj/Xog0/IQ=
+
   dependencies:
     jsonc-parser "^3.0.0"
     minimatch "^3.0.4"
