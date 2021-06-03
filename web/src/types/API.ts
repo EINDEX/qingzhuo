@@ -13,6 +13,4 @@ export type ArchiveItemType = {
   created_at: string;
 };
 
-export type ArchiveItemsByYearType = {
-  [year: number]: ArchiveItemType[];
-};
+export type ArchiveList = ArchiveList[];
