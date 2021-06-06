@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
-    "@vitejs/plugin-vue": "^1.2.2",
+    "@vitejs/plugin-vue": "^1.2.3",
     "axios": "^0.21.1",
     "moment": "^2.29.1",
     "vite": "^2.3.6",
