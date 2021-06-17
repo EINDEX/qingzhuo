@@ -4,8 +4,9 @@ go 1.16
 
 require (
 	github.com/gin-gonic/gin v1.7.2
-	github.com/spf13/viper v1.7.1
-	golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae // indirect
+	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
+	github.com/spf13/viper v1.8.0
+	github.com/yuin/goldmark v1.3.5
 	gorm.io/driver/mysql v1.1.0
 	gorm.io/gorm v1.21.10
 )
