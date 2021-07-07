@@ -1644,17 +1644,17 @@ eslint-plugin-prettier@^3.4.0:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-vue@^7.10.0:
-  version "7.10.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.10.0.tgz#251749aa99e089e085275f011042c6e74189f89a"
-  integrity sha512-xdr6e4t/L2moRAeEQ9HKgge/hFq+w9v5Dj+BA54nTAzSFdUyKLiSOdZaRQjCHMY0Pk2WaQBFH9QiWG60xiC+6A==
+eslint-plugin-vue@^7.13.0:
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.13.0.tgz#6f3d232bf1fcd0428353b0d581ebaca1c5dbc17a"
+  integrity sha512-u0+jL8h2MshRuMTCLslktxRsPTjlENNcNufhgHu01N982DmHVdeFniyMPoVLLRjACQOwdz3FdlsgYGBMBG+AKg==
   dependencies:
     eslint-utils "^2.1.0"
     natural-compare "^1.4.0"
     semver "^7.3.2"
-    vue-eslint-parser "^7.6.0"
+    vue-eslint-parser "^7.8.0"
 
-eslint-scope@^5.0.0, eslint-scope@^5.1.1:
+eslint-scope@^5.1.1:
   version "5.1.1"
   resolved "https://registry.npm.taobao.org/eslint-scope/download/eslint-scope-5.1.1.tgz#e786e59a66cb92b3f6c1fb0d508aab174848f48c"
   integrity sha1-54blmmbLkrP2wfsNUIqrF0hI9Iw=
@@ -2839,7 +2839,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.npm.taobao.org/lodash.uniq/download/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21:
+lodash@^4.17.19, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.21.tgz"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -5026,17 +5026,18 @@ vue-axios@^3.2.4:
   resolved "https://registry.npm.taobao.org/vue-axios/download/vue-axios-3.2.4.tgz?cache=0&sync_timestamp=1612149079370&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-axios%2Fdownload%2Fvue-axios-3.2.4.tgz#2334158db8ac2a0f603aa431c2626fbf6d766724"
   integrity sha1-IzQVjbisKg9gOqQxwmJvv212ZyQ=
 
-vue-eslint-parser@^7.0.0, vue-eslint-parser@^7.6.0:
-  version "7.6.0"
-  resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-7.6.0.tgz?cache=0&sync_timestamp=1614679624052&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-eslint-parser%2Fdownload%2Fvue-eslint-parser-7.6.0.tgz#01ea1a2932f581ff244336565d712801f8f72561"
-  integrity sha1-AeoaKTL1gf8kQzZWXXEoAfj3JWE=
+vue-eslint-parser@^7.0.0, vue-eslint-parser@^7.8.0:
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.8.0.tgz#43850bf856c9a69d62c0e12769609c338423684b"
+  integrity sha512-ehmmrLZNYLUoKayvVW8l8HyPQIfuYZHiJoQLRP3dapDlTU7bGs4tqIKVGdAEpMuXS/b4R/PImCt7Tkj4UhX1SQ==
   dependencies:
     debug "^4.1.1"
-    eslint-scope "^5.0.0"
+    eslint-scope "^5.1.1"
     eslint-visitor-keys "^1.1.0"
     espree "^6.2.1"
     esquery "^1.4.0"
-    lodash "^4.17.15"
+    lodash "^4.17.21"
+    semver "^6.3.0"
 
 vue-router@^4.0.8:
   version "4.0.8"
