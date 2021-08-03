@@ -8,5 +8,5 @@ require (
 	github.com/yuin/goldmark v1.3.8
 	golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae // indirect
 	gorm.io/driver/mysql v1.1.1
-	gorm.io/gorm v1.21.10
+	gorm.io/gorm v1.21.12
 )
