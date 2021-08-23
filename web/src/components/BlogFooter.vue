@@ -35,7 +35,7 @@
       <div class="grid justify-items-center">
         <a
           class="flex flex-row h-4 leading-4 gap-1 text-gray-500"
-          href="http://www.beian.gov.cn/portal/index"
+          href="https://beian.miit.gov.cn/"
           rel="noreferrer"
           target="_blank"
           ><img class="h-4 w-4" src="/@/assets/gongan.png" />鄂ICP备15018232号-1</a
