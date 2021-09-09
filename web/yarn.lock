@@ -3792,10 +3792,12 @@ vscode-vue-languageservice@^0.27.0:
     vscode-pug-languageservice "^0.27.1"
     vscode-typescript-languageservice "^0.27.1"
 
-vue-axios@^3.3.4:
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/vue-axios/-/vue-axios-3.3.4.tgz#870696aedcd9910dcaec76ceb705c255bf71432f"
-  integrity sha512-xzga/z/hAhdLNQDPMBEkmB9poR+FjBjLF6Dt+M/yZzRzMTxO0lOJIHCeOscdIaowHMi8n+AHsbbPSGXFUZFg9g==
+vue-axios@^3.3.6:
+  version "3.3.6"
+  resolved "https://registry.yarnpkg.com/vue-axios/-/vue-axios-3.3.6.tgz#ebd5eaa079c798308904b5550c6bdab6c6bc62cc"
+  integrity sha512-CnAnbyVqD4b1/IBz9lJQDOnBFX+AZLi0ZsPGy7i9Vo5z4QnquiN2FhCX1HDFGd5RNVwAhZrNY+PycRa6jrUmFw==
+  dependencies:
+    merge-stream "^2.0.0"
 
 vue-eslint-parser@^7.0.0, vue-eslint-parser@^7.10.0:
   version "7.10.0"
