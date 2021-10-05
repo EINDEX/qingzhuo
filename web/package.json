@@ -36,7 +36,7 @@
     "@vue/compiler-sfc": "^3.2.16",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
-    "autoprefixer": "^10.3.6",
+    "autoprefixer": "^10.3.7",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.1",
