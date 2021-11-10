@@ -31880,6 +31880,50 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+article {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  article {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  article {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  article {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  article {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  article {
+    max-width: 1536px;
+  }
+}
+
+article {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48rem;
+}
+
+article header h1 {
+  font-size: 4rem;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

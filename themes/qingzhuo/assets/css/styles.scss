@@ -1,3 +1,10 @@
 @import "node_modules/tailwindcss/base";
 @import "node_modules/tailwindcss/components";
 @import "node_modules/tailwindcss/utilities";
+
+article {
+    @apply container mx-auto max-w-3xl;
+    header h1 {
+        font-size: 4rem;
+    }
+}
