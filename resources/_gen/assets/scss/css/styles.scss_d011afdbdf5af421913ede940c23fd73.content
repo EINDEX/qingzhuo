@@ -31880,6 +31880,14 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+body {
+  font-family: 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei', 'Arial', 'San Francisco';
+}
+
+code {
+  font-family: monospace, 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei', 'Arial', 'San Francisco';
+}
+
 article {
   width: 100%;
 }
@@ -31918,10 +31926,190 @@ article {
   margin-left: auto;
   margin-right: auto;
   max-width: 48rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-article header h1 {
-  font-size: 4rem;
+article #title {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+article main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(31, 41, 55, var(--tw-text-opacity));
+}
+
+article main hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgba(199, 210, 254, var(--tw-border-opacity));
+}
+
+article main p {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+article main ul li {
+  margin-left: 2rem;
+  list-style-position: outside;
+  list-style-type: disc;
+}
+
+article main ol li {
+  margin-left: 2rem;
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+
+article main h6 {
+  font-size: 1rem;
+  line-height: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+article main h5 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0.625rem;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+article main h4 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+article main h3 {
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  padding-top: 1.75rem;
+  padding-bottom: 0.875rem;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+article main h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+article main h1 {
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  padding-top: 2.25rem;
+  padding-bottom: 1.125rem;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+article main em {
+  font-style: italic;
+}
+
+article main strong {
+  font-weight: 700;
+}
+
+article main del {
+  text-decoration: line-through;
+}
+
+article main blockquote {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-left-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgba(199, 210, 254, var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(224, 231, 255, var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+article main pre {
+  font-family: 'Jetbrains Mono';
+  background-color: #272822;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+article main a {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-style: italic;
+  --tw-text-opacity: 1;
+  color: rgba(67, 56, 202, var(--tw-text-opacity));
+}
+
+article main a:hover {
+  --tw-text-opacity: 1;
+  color: rgba(49, 46, 129, var(--tw-text-opacity));
+  text-decoration: underline;
+}
+
+article main section.footnotes hr {
+  hidden: true;
+}
+
+article main section.footnotes ol {
+  margin-top: 0.25rem;
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(224, 231, 255, var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(79, 70, 229, var(--tw-text-opacity));
+}
+
+article main section.footnotes ol p {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+article main section.footnotes ol a.footnote-backref {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width: 640px) {

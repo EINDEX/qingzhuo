@@ -2,9 +2,88 @@
 @import "node_modules/tailwindcss/components";
 @import "node_modules/tailwindcss/utilities";
 
+body {
+    font-family: 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei', 'Arial', 'San Francisco';
+}
+
+code {
+    font-family: monospace, 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei', 'Arial', 'San Francisco';
+}
+
 article {
-    @apply container mx-auto max-w-3xl;
-    header h1 {
-        font-size: 4rem;
+    @apply container mx-auto max-w-3xl py-12;
+
+    #title {
+        @apply text-5xl;
+    }
+
+    main {
+        @apply text-base text-gray-800 py-8;
+        hr {
+            @apply border-indigo-200 border-t-4 my-4;
+        }
+        p {
+            @apply py-2 text-base;
+        }
+
+        ul li {
+            @apply ml-8 list-disc list-outside;
+        }
+
+        ol li {
+            @apply ml-8 list-decimal list-outside;
+        }
+
+        @for $i from 1 through 6 {
+            h#{7 - $i} {
+                font-size: ($i+3)/4 * 1rem;
+                line-height: ($i+3)/4 * 1rem;
+                padding-top: ($i+3)/4*1rem;
+                padding-bottom: ($i+3)/4* 0.5rem;
+                @apply text-black;
+            }
+        }
+
+        em {
+            @apply italic;
+        }
+
+        strong {
+            @apply font-bold
+        }
+
+        del {
+            @apply line-through
+        }
+
+        blockquote {
+            @apply px-4 bg-indigo-100 py-2 my-2 border-l-4 border-indigo-200 italic font-medium
+        }
+
+        pre {
+            font-family: 'Jetbrains Mono';
+            background-color: #272822;
+            @apply px-4 py-2 my-2 text-white rounded-xl overflow-x-auto overflow-y-hidden
+        }
+
+        a {
+            @apply text-indigo-700 hover:underline hover:text-indigo-900 italic px-1
+        }
+
+        section.footnotes {
+            hr {
+                hidden: true;
+            }
+            ol {
+                @apply mt-1 py-2 text-sm  text-indigo-600  bg-indigo-100 rounded-xl;
+                p {
+                    @apply text-sm py-0;
+                }
+                a.footnote-backref {
+                    @apply text-sm;
+                }
+            }
+        }
     }
 }
+
