@@ -1,7 +1,7 @@
 baseURL = 'http://example.org/'
 languageCode = 'cn'
 theme = 'qingzhuo'
-title = 'My New Hugo Site'
+title = "EINDEX's Blog"
 
 hasCJKLanguage = true
 summaryLength = 100
