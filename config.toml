@@ -1,14 +1,16 @@
 baseURL = 'http://example.org/'
 languageCode = 'cn'
-title = 'My New Hugo Site'
 theme = 'qingzhuo'
+title = 'My New Hugo Site'
 
+hasCJKLanguage = true
+summaryLength = 100
 
 [markup]
-  [markup.highlight]
-    style='monokai'
-    tabWidth=4
+[markup.highlight]
+style = 'monokai'
+tabWidth = 4
 
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true

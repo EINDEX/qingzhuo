@@ -5,6 +5,97 @@
     <link>http://example.org/tags/</link>
     <description>Recent content in Tags on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn</language><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>cn</language>
+    <lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0800</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beancount</title>
+      <link>http://example.org/tags/beancount/</link>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://example.org/tags/beancount/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python,Crawler</title>
+      <link>http://example.org/tags/pythoncrawler/</link>
+      <pubDate>Sat, 07 Sep 2019 12:17:25 +0800</pubDate>
+      
+      <guid>http://example.org/tags/pythoncrawler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>After Reading</title>
+      <link>http://example.org/tags/after-reading/</link>
+      <pubDate>Mon, 02 Sep 2019 23:28:58 +0800</pubDate>
+      
+      <guid>http://example.org/tags/after-reading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Index,Search Engine,Algorithm</title>
+      <link>http://example.org/tags/indexsearch-enginealgorithm/</link>
+      <pubDate>Tue, 27 Aug 2019 12:31:56 +0800</pubDate>
+      
+      <guid>http://example.org/tags/indexsearch-enginealgorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thoughtworks</title>
+      <link>http://example.org/tags/thoughtworks/</link>
+      <pubDate>Mon, 08 Jul 2019 14:28:37 +0800</pubDate>
+      
+      <guid>http://example.org/tags/thoughtworks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python,Cache,ETag</title>
+      <link>http://example.org/tags/pythoncacheetag/</link>
+      <pubDate>Wed, 24 Apr 2019 14:20:03 +0800</pubDate>
+      
+      <guid>http://example.org/tags/pythoncacheetag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python,Env</title>
+      <link>http://example.org/tags/pythonenv/</link>
+      <pubDate>Wed, 05 Sep 2018 14:22:34 +0800</pubDate>
+      
+      <guid>http://example.org/tags/pythonenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KMP,Python,Algorithm</title>
+      <link>http://example.org/tags/kmppythonalgorithm/</link>
+      <pubDate>Fri, 11 May 2018 14:32:26 +0800</pubDate>
+      
+      <guid>http://example.org/tags/kmppythonalgorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python,Algorithm</title>
+      <link>http://example.org/tags/pythonalgorithm/</link>
+      <pubDate>Sun, 08 Apr 2018 14:30:44 +0800</pubDate>
+      
+      <guid>http://example.org/tags/pythonalgorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guide,ArchLinux</title>
+      <link>http://example.org/tags/guidearchlinux/</link>
+      <pubDate>Thu, 05 Oct 2017 14:24:21 +0800</pubDate>
+      
+      <guid>http://example.org/tags/guidearchlinux/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

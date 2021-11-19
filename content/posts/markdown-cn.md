@@ -1,12 +1,12 @@
 ---
-title: "走进Markdown园子"
+title: "Markdown Testing"
 date: 2021-11-11T11:39:17+08:00
 draft: true
 ---
 
----
 >起初也就是打算简单一些Markdown在编辑Blog方面的一些常用操作和注意事项，没想到，一下没刹住，毫无防备地闯进了这个好趣的园子....
 
+<!--more-->
 ## 1. 认识 Markdown
 >HTML(HyperText Markup Language)作为一种超文本标记语言(markup language)应运而生，无数的网页从此有了主次分明，层次清晰的格式。如果将HTML比作一架重机枪，那么Markdown就是一把手枪，满足了主要的文本格式标记的需求，可是操作性却大大简化。秉承**「易读易写」**的宗旨，Markdown作为一种轻量级标记语言(lightweight markup language)，让无数的程序猿和文字工作者爱不释手。
 
@@ -696,7 +696,6 @@ Web 端上，推荐 [简书](https://www.jianshu.com/ "创作你的创作，一�
 
  **如有更好的 Markdown 免费编辑器推荐，请到[这里留言反馈](https://github.com/Javef/Markdown/issues)，谢谢！**
 
----
 ## 4. 更多链接
 * [MarkDown学习笔记](https://www.jianshu.com/p/564bdf3a9462?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
 * [首次使用MarkDown好激动](https://www.zybuluo.com/liayun/note/371635)

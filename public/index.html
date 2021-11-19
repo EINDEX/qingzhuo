@@ -2,8 +2,22 @@
 <html>
 
   
-  <link rel="stylesheet" href="http://example.org/css/styles.min.a81fc85353fc4881fc847261ad6a6f379d67df92a0b69d0930ebd53d9b517bab.css" integrity="sha256-qB/IU1P8SIH8hHJhrWpvN51n35Kgtp0JMOvVPZtRe6s=">
-<body><nav class="h-auto">
+  <link rel="stylesheet" href="http://example.org/css/styles.min.33e115ef51a3ce0b14c1ef62296786b6de7e969748e1e0f049654dad5d1ec4f7.css" integrity="sha256-M+EV71GjzgsUwe9iKWeGtt5+lpdI4eDwSWVNrV0exPc=">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.css" integrity="sha384-WsHMgfkABRyG494OmuiNmkAOk8nhO1qE+Y6wns6v+EoNoTNxrWxYpl5ZYWFOLPCM" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.js" integrity="sha384-lhN3C1JSmmvbT89RGOy6nC8qFBS8X/PLsBWIqiNdD4WGNsYOWpS2Il0x4TBrK8E2" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script><body><nav class="h-auto">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center">
@@ -54,7 +68,150 @@
   </div>
 </nav>
 <div id="content">
-  
+<main class="max-w-3xl mx-auto px-4 h-auto">
+    <ul class="divide-y divide-gray-200">
+              
+    
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">复式记账工具 Beancount</h1>
+              <p><p>本文简单介绍一下复式记账和 Beancount 的使用方法。</p></p>
+              <a class="-mx-1 font-medium" href="/posts/beancount-introduce/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">一百行代码实现异步爬虫</h1>
+              <p><p>一个优雅的爬虫需要一下这些东西：</p>
+<ul>
+<li>请求器</li>
+<li>页面解析器</li>
+<li>链接生成器</li>
+<li>调度器</li>
+</ul></p>
+              <a class="-mx-1 font-medium" href="/posts/one-hundred-line-async-crawler/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">《1984》读后感</h1>
+              <p><p>这本书看了很久了，下面这句话一直环绕在我脑中，始终不能忘记。</p>
+<blockquote>
+<p>“老大哥在看着你。”</p>
+</blockquote></p>
+              <a class="-mx-1 font-medium" href="/posts/1984-after-reading/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">倒排索引</h1>
+              <p><p>世界上最伟大的互联网产品,说是搜索引擎,绝对没有别的产品可以替代,尤其是伟大的先在市场占用率最高的搜索引擎,Google Search.</p>
+<p>还有很多差一大截的,比如 Bing, Yahoo 和 YANDEX.</p></p>
+              <a class="-mx-1 font-medium" href="/posts/inverted-index/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">Thoughtworks 一月</h1>
+              <p><p>距离加入 Thoughtworks 已有一个月。
+这家公司也并非互联网公司，没有高强度的工作节奏，没有996，有一些敏捷信仰。
+对于武汉来说，也算是一个优秀的公司。</p>
+<p>同时正如网上所言：该有的缺点也是有的。好奇的同学可以去看一下我的编程引路人（也是我司黑粉头子）耗子叔（陈皓）的文章。</p></p>
+              <a class="-mx-1 font-medium" href="/posts/thoughworks-one-month/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">Tornado Auto Etag 机制</h1>
+              <p><p>为了研究缓存看了 tornado <code>web.py</code> 里的 <code>finish</code> 函数</p></p>
+              <a class="-mx-1 font-medium" href="/posts/tornado-auto-etag/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">Pipenv &#43; Autoenv 更友善的工作环境</h1>
+              <p><p>Python 包管理一直都是一个问题，如今 3.6 推荐采用 Pipenv 出自 Requests 的大牛做所。配合上他写的 Autoenv 切换环境再也不是问题。</p></p>
+              <a class="-mx-1 font-medium" href="/posts/pipenv-autoenv/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">KMP 算法</h1>
+              <p><blockquote>
+<p>在计算机科学中，Knuth-Morris-Pratt字符串查找算法（简称为KMP算法）可在一个主文本字符串S内查找一个词W的出现位置。此算法通过运用对这个词在不匹配时本身就包含足够的信息来确定下一个匹配将在哪里开始的发现，从而避免重新检查先前匹配的字符。</p>
+</blockquote></p>
+              <a class="-mx-1 font-medium" href="/posts/kmp/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">Tree in Python</h1>
+              <p><p>树是计算机科学中常用的数据结构之一,常见的地方有，Java 的继承树等。
+还有一些基于树的特殊数据结构，比如二叉树，B 树，等等。</p>
+<p>本篇会讲述一些关于简单关于树的操作。</p></p>
+              <a class="-mx-1 font-medium" href="/posts/tree-in-python/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">基本排序算法的Python实现</h1>
+              <p><p>本篇主要实现九(八）大排序算法，分别是冒泡排序，插入排序，选择排序，希尔排序，归并排序，快速排序，堆排序,计数排序。希望大家回顾知识的时候也能从我的这篇文章得到帮助。</p></p>
+              <a class="-mx-1 font-medium" href="/posts/sort-in-python/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">基本线性数据结构的Python实现</h1>
+              <p><p>本篇主要实现四种数据结构，分别是数组、堆栈、队列、链表。我不知道我为什么要用Python来干C干的事情，总之Python就是可以干。</p></p>
+              <a class="-mx-1 font-medium" href="/posts/liner-in-python/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+        <li>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">小白也能上手的 ArchLinux 安装教程</h1>
+              <p><p>ArchLinux 是一个非常符合我个人哲学的操作系统，深得与我一样的大部分 Pythonista 之心(不好意思代表你们了)。</p></p>
+              <a class="-mx-1 font-medium" href="/posts/archlinux-install-guide/">Read more →</a>
+            </main>
+          </article>
+        </li>
+    
+    </ul>
+</main>
 
         </div><footer class="h-auto">
   <div

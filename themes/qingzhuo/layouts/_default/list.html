@@ -1,17 +1,17 @@
 {{ define "main" }}
-<main>
-    <article>
-        <header>
-            <h1>{{.Title}}</h1>
-        </header>
-        <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
-        {{.Content}}
-    </article>
-    <ul>
+<main class="max-w-3xl mx-auto px-4 h-auto">
+    <ul class="divide-y divide-gray-200">
+              
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
         <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+          <article class="py-0">
+            <main>
+              <h1 class="py-2">{{ .Title }}</h1>
+              <p>{{ .Summary }}</p>
+              <a class="-mx-1 font-medium" href="{{ .RelPermalink }}">Read more →</a>
+            </main>
+          </article>
         </li>
     {{ end }}
     </ul>

@@ -31931,8 +31931,8 @@ article {
 }
 
 article #title {
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 article main {
@@ -31972,54 +31972,54 @@ article main ol li {
 }
 
 article main h6 {
-  font-size: 1rem;
-  line-height: 1rem;
-  padding-top: 1rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  padding-top: 0.75rem;
   padding-bottom: 0.5rem;
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
 
 article main h5 {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  padding-top: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 0.9375rem;
+  padding-top: 0.9375rem;
   padding-bottom: 0.625rem;
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
 
 article main h4 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  padding-top: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  padding-top: 1.125rem;
   padding-bottom: 0.75rem;
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
 
 article main h3 {
-  font-size: 1.75rem;
-  line-height: 1.75rem;
-  padding-top: 1.75rem;
+  font-size: 1.3125rem;
+  line-height: 1.3125rem;
+  padding-top: 1.3125rem;
   padding-bottom: 0.875rem;
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
 
 article main h2 {
-  font-size: 2rem;
-  line-height: 2rem;
-  padding-top: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  padding-top: 1.5rem;
   padding-bottom: 1rem;
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
 
 article main h1 {
-  font-size: 2.25rem;
-  line-height: 2.25rem;
-  padding-top: 2.25rem;
+  font-size: 1.6875rem;
+  line-height: 1.6875rem;
+  padding-top: 1.6875rem;
   padding-bottom: 1.125rem;
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity));
@@ -32091,13 +32091,13 @@ article main section.footnotes ol {
   margin-top: 0.25rem;
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
-  background-color: rgba(224, 231, 255, var(--tw-bg-opacity));
+  background-color: rgba(238, 242, 255, var(--tw-bg-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: rgba(79, 70, 229, var(--tw-text-opacity));
+  color: rgba(129, 140, 248, var(--tw-text-opacity));
 }
 
 article main section.footnotes ol p {
@@ -32110,6 +32110,8 @@ article main section.footnotes ol p {
 article main section.footnotes ol a.footnote-backref {
   font-size: 0.875rem;
   line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(129, 140, 248, var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {

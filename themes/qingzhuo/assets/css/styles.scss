@@ -14,7 +14,7 @@ article {
     @apply container mx-auto max-w-3xl py-12;
 
     #title {
-        @apply text-5xl;
+        @apply text-4xl;
     }
 
     main {
@@ -36,9 +36,9 @@ article {
 
         @for $i from 1 through 6 {
             h#{7 - $i} {
-                font-size: ($i+3)/4 * 1rem;
-                line-height: ($i+3)/4 * 1rem;
-                padding-top: ($i+3)/4*1rem;
+                font-size: ($i+3)/4 * 0.75rem;
+                line-height: ($i+3)/4 * 0.75rem;
+                padding-top: ($i+3)/4* 0.75rem;
                 padding-bottom: ($i+3)/4* 0.5rem;
                 @apply text-black;
             }
@@ -75,12 +75,12 @@ article {
                 hidden: true;
             }
             ol {
-                @apply mt-1 py-2 text-sm  text-indigo-600  bg-indigo-100 rounded-xl;
+                @apply mt-1 py-2 text-sm  text-indigo-400  bg-indigo-50 rounded-xl;
                 p {
                     @apply text-sm py-0;
                 }
                 a.footnote-backref {
-                    @apply text-sm;
+                    @apply text-sm text-indigo-400;
                 }
             }
         }
