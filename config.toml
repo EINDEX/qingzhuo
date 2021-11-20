@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://eindex.me/'
 languageCode = 'cn'
 theme = 'qingzhuo'
 title = "EINDEX's Blog"
@@ -14,3 +14,9 @@ tabWidth = 4
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
+
+
+[outputFormats]
+[outputFormats.FEED]
+mediatype = "application/rss"
+baseName = "feed"

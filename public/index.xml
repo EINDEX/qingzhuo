@@ -1,36 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>EINDEX&#39;s Blog</title>
+    <link>https://eindex.me/</link>
+    <description>Recent content on EINDEX&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About Me</title>
-      <link>http://example.org/about/</link>
-      <pubDate>Tue, 09 Nov 2021 21:59:04 +0800</pubDate>
-      
-      <guid>http://example.org/about/</guid>
-      <description>我是 EINDEX 一个咸鱼开发者，摄影、咖啡爱好者 ：）</description>
-    </item>
-    
+    <lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0800</lastBuildDate><atom:link href="https://eindex.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>复式记账工具 Beancount</title>
-      <link>http://example.org/posts/beancount-introduce/</link>
+      <link>https://eindex.me/posts/beancount-introduce/</link>
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0800</pubDate>
       
-      <guid>http://example.org/posts/beancount-introduce/</guid>
+      <guid>https://eindex.me/posts/beancount-introduce/</guid>
       <description>&lt;p&gt;本文简单介绍一下复式记账和 Beancount 的使用方法。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>一百行代码实现异步爬虫</title>
-      <link>http://example.org/posts/one-hundred-line-async-crawler/</link>
+      <link>https://eindex.me/posts/one-hundred-line-async-crawler/</link>
       <pubDate>Sat, 07 Sep 2019 12:17:25 +0800</pubDate>
       
-      <guid>http://example.org/posts/one-hundred-line-async-crawler/</guid>
+      <guid>https://eindex.me/posts/one-hundred-line-async-crawler/</guid>
       <description>&lt;p&gt;一个优雅的爬虫需要一下这些东西：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;请求器&lt;/li&gt;
@@ -42,10 +33,10 @@
     
     <item>
       <title>《1984》读后感</title>
-      <link>http://example.org/posts/1984-after-reading/</link>
+      <link>https://eindex.me/posts/1984-after-reading/</link>
       <pubDate>Mon, 02 Sep 2019 23:28:58 +0800</pubDate>
       
-      <guid>http://example.org/posts/1984-after-reading/</guid>
+      <guid>https://eindex.me/posts/1984-after-reading/</guid>
       <description>&lt;p&gt;这本书看了很久了，下面这句话一直环绕在我脑中，始终不能忘记。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“老大哥在看着你。”&lt;/p&gt;
@@ -54,20 +45,20 @@
     
     <item>
       <title>倒排索引</title>
-      <link>http://example.org/posts/inverted-index/</link>
+      <link>https://eindex.me/posts/inverted-index/</link>
       <pubDate>Tue, 27 Aug 2019 12:31:56 +0800</pubDate>
       
-      <guid>http://example.org/posts/inverted-index/</guid>
+      <guid>https://eindex.me/posts/inverted-index/</guid>
       <description>&lt;p&gt;世界上最伟大的互联网产品,说是搜索引擎,绝对没有别的产品可以替代,尤其是伟大的先在市场占用率最高的搜索引擎,Google Search.&lt;/p&gt;
 &lt;p&gt;还有很多差一大截的,比如 Bing, Yahoo 和 YANDEX.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Thoughtworks 一月</title>
-      <link>http://example.org/posts/thoughworks-one-month/</link>
+      <link>https://eindex.me/posts/thoughworks-one-month/</link>
       <pubDate>Mon, 08 Jul 2019 14:28:37 +0800</pubDate>
       
-      <guid>http://example.org/posts/thoughworks-one-month/</guid>
+      <guid>https://eindex.me/posts/thoughworks-one-month/</guid>
       <description>&lt;p&gt;距离加入 Thoughtworks 已有一个月。
 这家公司也并非互联网公司，没有高强度的工作节奏，没有996，有一些敏捷信仰。
 对于武汉来说，也算是一个优秀的公司。&lt;/p&gt;
@@ -76,28 +67,28 @@
     
     <item>
       <title>Tornado Auto Etag 机制</title>
-      <link>http://example.org/posts/tornado-auto-etag/</link>
+      <link>https://eindex.me/posts/tornado-auto-etag/</link>
       <pubDate>Wed, 24 Apr 2019 14:20:03 +0800</pubDate>
       
-      <guid>http://example.org/posts/tornado-auto-etag/</guid>
+      <guid>https://eindex.me/posts/tornado-auto-etag/</guid>
       <description>&lt;p&gt;为了研究缓存看了 tornado &lt;code&gt;web.py&lt;/code&gt; 里的 &lt;code&gt;finish&lt;/code&gt; 函数&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pipenv &#43; Autoenv 更友善的工作环境</title>
-      <link>http://example.org/posts/pipenv-autoenv/</link>
+      <link>https://eindex.me/posts/pipenv-autoenv/</link>
       <pubDate>Wed, 05 Sep 2018 14:22:34 +0800</pubDate>
       
-      <guid>http://example.org/posts/pipenv-autoenv/</guid>
+      <guid>https://eindex.me/posts/pipenv-autoenv/</guid>
       <description>&lt;p&gt;Python 包管理一直都是一个问题，如今 3.6 推荐采用 Pipenv 出自 Requests 的大牛做所。配合上他写的 Autoenv 切换环境再也不是问题。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>KMP 算法</title>
-      <link>http://example.org/posts/kmp/</link>
+      <link>https://eindex.me/posts/kmp/</link>
       <pubDate>Fri, 11 May 2018 14:32:26 +0800</pubDate>
       
-      <guid>http://example.org/posts/kmp/</guid>
+      <guid>https://eindex.me/posts/kmp/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;在计算机科学中，Knuth-Morris-Pratt字符串查找算法（简称为KMP算法）可在一个主文本字符串S内查找一个词W的出现位置。此算法通过运用对这个词在不匹配时本身就包含足够的信息来确定下一个匹配将在哪里开始的发现，从而避免重新检查先前匹配的字符。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -105,10 +96,10 @@
     
     <item>
       <title>Tree in Python</title>
-      <link>http://example.org/posts/tree-in-python/</link>
+      <link>https://eindex.me/posts/tree-in-python/</link>
       <pubDate>Sun, 08 Apr 2018 14:30:44 +0800</pubDate>
       
-      <guid>http://example.org/posts/tree-in-python/</guid>
+      <guid>https://eindex.me/posts/tree-in-python/</guid>
       <description>&lt;p&gt;树是计算机科学中常用的数据结构之一,常见的地方有，Java 的继承树等。
 还有一些基于树的特殊数据结构，比如二叉树，B 树，等等。&lt;/p&gt;
 &lt;p&gt;本篇会讲述一些关于简单关于树的操作。&lt;/p&gt;</description>
@@ -116,28 +107,28 @@
     
     <item>
       <title>基本排序算法的Python实现</title>
-      <link>http://example.org/posts/sort-in-python/</link>
+      <link>https://eindex.me/posts/sort-in-python/</link>
       <pubDate>Thu, 05 Oct 2017 14:34:54 +0800</pubDate>
       
-      <guid>http://example.org/posts/sort-in-python/</guid>
+      <guid>https://eindex.me/posts/sort-in-python/</guid>
       <description>&lt;p&gt;本篇主要实现九(八）大排序算法，分别是冒泡排序，插入排序，选择排序，希尔排序，归并排序，快速排序，堆排序,计数排序。希望大家回顾知识的时候也能从我的这篇文章得到帮助。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>基本线性数据结构的Python实现</title>
-      <link>http://example.org/posts/liner-in-python/</link>
+      <link>https://eindex.me/posts/liner-in-python/</link>
       <pubDate>Thu, 05 Oct 2017 14:33:39 +0800</pubDate>
       
-      <guid>http://example.org/posts/liner-in-python/</guid>
+      <guid>https://eindex.me/posts/liner-in-python/</guid>
       <description>&lt;p&gt;本篇主要实现四种数据结构，分别是数组、堆栈、队列、链表。我不知道我为什么要用Python来干C干的事情，总之Python就是可以干。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>小白也能上手的 ArchLinux 安装教程</title>
-      <link>http://example.org/posts/archlinux-install-guide/</link>
+      <link>https://eindex.me/posts/archlinux-install-guide/</link>
       <pubDate>Thu, 05 Oct 2017 14:24:21 +0800</pubDate>
       
-      <guid>http://example.org/posts/archlinux-install-guide/</guid>
+      <guid>https://eindex.me/posts/archlinux-install-guide/</guid>
       <description>&lt;p&gt;ArchLinux 是一个非常符合我个人哲学的操作系统，深得与我一样的大部分 Pythonista 之心(不好意思代表你们了)。&lt;/p&gt;</description>
     </item>
     
