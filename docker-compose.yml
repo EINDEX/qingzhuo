@@ -14,7 +14,7 @@ services:
       - "traefik.http.services.blog.loadbalancer.server.port=80"
       - "traefik.http.routers.blog.entrypoints=web,websecure"
       - "traefik.http.routers.blog.tls.certresolver=eindex-me"
-      - "traefik.http.routers.blog.rule=Host(`eindex.me`) || Host(`eindex.me`)"
+      - "traefik.http.routers.blog.rule=Host(`blogcdn.eindex.me`) || Host(`eindex.me`)"
       - "traefik.http.routers.blog.tls.options=default"
 
 networks:
