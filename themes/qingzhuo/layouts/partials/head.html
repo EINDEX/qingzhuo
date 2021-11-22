@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 {{ $styles := resources.Get "css/styles.scss" | toCSS | postCSS (dict "config" "./assets/css/postcss.config.js") }}
 {{ if .Site.IsServer }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
@@ -5,7 +6,7 @@
   {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
 {{ end }}
-<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.ico">
 <title>{{ .Title }}</title>
 {{ if eq .Params.latex true }}
