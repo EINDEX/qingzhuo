@@ -18,7 +18,10 @@ tabWidth = 4
 unsafe = true
 
 
+[outputs]
+home = [ "RSS", "HTML"]
+
 [outputFormats]
-[outputFormats.FEED]
+[outputFormats.RSS]
 mediatype = "application/rss"
 baseName = "feed"
