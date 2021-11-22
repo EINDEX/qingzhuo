@@ -6,6 +6,8 @@ title = "EINDEX's Blog"
 hasCJKLanguage = true
 summaryLength = 100
 
+googleAnalytics = 'G-B4GVHJ5ND3'
+
 [markup]
 [markup.highlight]
 style = 'monokai'
