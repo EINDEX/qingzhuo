@@ -16,6 +16,7 @@ services:
       - "traefik.http.routers.blog.tls.certresolver=eindex-me"
       - "traefik.http.routers.blog.rule=Host(`blogcdn.eindex.me`) || Host(`eindex.me`)"
       - "traefik.http.routers.blog.tls.options=default"
+    restart: always
 
 networks:
   traefik:
