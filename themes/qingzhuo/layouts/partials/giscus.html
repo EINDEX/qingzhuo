@@ -1,0 +1,14 @@
+{{ if and (isset .Site.Params.giscus "repo")}}
+<script src="https://giscus.app/client.js"
+    data-repo="{{ .Site.Params.giscus.repo }}"
+    data-repo-id="{{ .Site.Params.giscus.repoId }}"
+    data-category-id="{{ .Site.Params.giscus.categoryId }}"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-theme="light"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async>
+</script>
+{{ end }}

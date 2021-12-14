@@ -25,3 +25,9 @@ home = [ "RSS", "HTML"]
 [outputFormats.RSS]
 mediatype = "application/rss"
 baseName = "feed"
+
+[params]
+[params.giscus]
+repo = "EINDEX/qingzhuo-hugo"
+repoId = "R_kgDOGWb6Yg"
+categoryId = "DIC_kwDOGWb6Ys4CAKn-"
