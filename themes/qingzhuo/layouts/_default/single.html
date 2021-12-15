@@ -1,11 +1,23 @@
+{{ define "head" }}
+    <meta charset="utf-8">
+{{ end }}
+
 {{ define "main" }}
 <article>
     <header>
     <h1 id="title">{{ .Title }}</h1>
+    {{ if eq .Section "posts" }}
+        {{ $days_before := int (div (now.Sub .Date).Hours 24) }}
+        {{ if gt $days_before 30 }}
+            <p class="warning">本文更新于 {{ $days_before }} 天前，其内容可能不准确。</p>
+        {{ end }}
+    {{ end }}
     </header>
     <main>
     {{ .Content }}
     </main>
+    <footer>
     {{- partial "giscus.html" . -}}
+    </footer>
 </article>
 {{ end }}
