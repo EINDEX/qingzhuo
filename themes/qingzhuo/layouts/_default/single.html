@@ -6,11 +6,18 @@
 <article>
     <header>
     <h1 id="title">{{ .Title }}</h1>
+    <time>{{ .Date | time.Format ":date_medium" }}</time>
     {{ if eq .Section "posts" }}
-        {{ $days_before := int (div (now.Sub .Date).Hours 24) }}
-        {{ if gt $days_before 30 }}
-            <p class="warning">本文更新于 {{ $days_before }} 天前，其内容可能不准确。</p>
-        {{ end }}
+    <p id="days-ago-warning" style="display:none" class="warning"></p>
+    <script>
+        let daysAgo = Math.floor((new Date() - new Date("{{ .Date }}"))/1000/3600/24);
+        if (daysAgo > {{ .Site.Params.outdateingWarningDays }}){
+            let element = document.getElementById("days-ago-warning");
+            element.innerText = `提醒: 本文更新于 ${daysAgo} 天前，文中所述的内容可能已经发生改变。`
+            element.style = "display: true"
+        }
+    </script>
+        
     {{ end }}
     </header>
     <main>

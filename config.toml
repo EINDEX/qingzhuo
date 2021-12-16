@@ -27,6 +27,9 @@ mediatype = "application/rss"
 baseName = "feed"
 
 [params]
+
+outdateingWarningDays = 30
+
 [params.giscus]
 repo = "EINDEX/qingzhuo-hugo"
 repoId = "R_kgDOGWb6Yg"
