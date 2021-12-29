@@ -7,18 +7,7 @@
     <header>
     <h1 id="title">{{ .Title }}</h1>
     <time>{{ .Date | time.Format ":date_medium" }}</time>
-    {{ if eq .Section "posts" }}
-    <p id="days-ago-warning" style="display:none" class="warning"></p>
-    <script>
-        let daysAgo = Math.floor((new Date() - new Date("{{ .Date }}"))/1000/3600/24);
-        if (daysAgo > {{ .Site.Params.outdateingWarningDays }}){
-            let element = document.getElementById("days-ago-warning");
-            element.innerText = `提醒: 本文更新于 ${daysAgo} 天前，文中所述的内容可能已经发生改变。`
-            element.style = "display: true"
-        }
-    </script>
-        
-    {{ end }}
+    {{- partial "expire-warning.html" . -}}
     </header>
     <main>
     {{ .Content }}
