@@ -26,7 +26,7 @@
     "moment": "^2.29.1",
     "vite": "^2.6.14",
     "vue": "^3.2.23",
-    "vue-axios": "^3.4.0",
+    "vue-axios": "^3.4.1",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
