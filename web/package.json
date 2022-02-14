@@ -24,7 +24,7 @@
     "@vitejs/plugin-vue": "^1.10.1",
     "axios": "^0.24.0",
     "moment": "^2.29.1",
-    "vite": "^2.7.13",
+    "vite": "^2.8.1",
     "vue": "^3.2.23",
     "vue-axios": "^3.4.1",
     "vue-router": "^4.0.12"
