@@ -1,7 +1,7 @@
 {{ $paginator := .Paginator }}
 
 <!-- Number of links either side of the current page. -->
-{{ $adjacent_links := 2 }}
+{{ $adjacent_links := 3 }}
 
 <!-- $max_links = ($adjacent_links * 2) + 1 -->
 {{ $max_links := (add (mul $adjacent_links 2) 1) }}
@@ -69,8 +69,8 @@
 
       <!-- Output page numbers. -->
       {{ if eq ($.Scratch.Get "page_number_flag") true }}
-        <li class="item{{ if eq . $paginator }} item--current{{ end }}">
-          <a href="{{ .URL }}" class="button">
+        <li class="item{{ if eq . $paginator }} hide item--current{{ end }}">
+          <a href="{{ .URL }}" class="hide button">
             {{ .PageNumber }}
           </a>
         </li>

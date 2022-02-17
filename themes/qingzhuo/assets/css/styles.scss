@@ -5,16 +5,23 @@
 
 body {
     font-family: 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei', 'Arial', 'San Francisco';
-    @apply flex flex-col items-center space-y-4;
+    @apply flex flex-col items-center justify-around space-y-4 my-4 px-4 sm:my-2 sm:px-2;
 }
 
 code {
     font-family: monospace, 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei', 'Arial', 'San Francisco';
 }
 
+content {
+    @apply container flex flex-col items-center justify-center;
+
+    main {
+        @apply w-full px-4 sm:px-2;
+    }
+}
 
 article {
-    @apply container mx-auto max-w-4xl my-4 heti;
+    @apply max-w-4xl my-4 heti;
 
     hr {
         width: '40%';
@@ -108,7 +115,7 @@ article {
 
 .pagination {
     width:  100%;
-    @apply flex justify-between max-w-2xl py-2 my-2;
+    @apply flex justify-between max-w-xl;
 
     .item  {
         @apply flex content-center;
@@ -116,17 +123,21 @@ article {
         }
         .item--prev {
         }
+
+        .hide {
+            @apply sm:hidden;
+        }
     }
 }
 
 .navbar {
-    @apply flex px-4 mt-4 h-12 max-w-6xl w-full justify-center place-items-center;
+    @apply flex max-h-fit max-w-6xl w-full justify-center place-items-center;
     
     .items {
-        @apply flex items-center w-full justify-between space-x-4 h-8;
+        @apply flex items-center w-full justify-between space-x-4 max-h-fit;
 
         .delimiter {
-            @apply flex-1
+            @apply grow
         }
 
         .avatar {
@@ -135,12 +146,46 @@ article {
     }
 }
 
+
 .footer {
-    @apply max-w-6xl
+    @apply flex flex-col w-full space-y-2 justify-center items-center pb-4;
+
+    .content {
+        @apply flex flex-row sm:flex-col sm:w-full sm:h-full sm:space-x-4 max-w-6xl w-full justify-between sm:items-center space-x-4;
+
+        // .item {
+        //     @apply flex;
+        // }
+        .item {
+            @apply flex sm:h-full  flex-row space-x-4 justify-center items-center;
+
+            .avatar {
+                @apply flex-auto rounded-xl w-32;
+            }
+            .links {
+                @apply flex flex-col h-full leading-4 justify-around space-y-4;
+                a {
+                    @apply flex flex-row gap-2 justify-start items-center text-center text-sm h-4 leading-4;
+                    img {
+                        @apply h-4 w-4
+                    }
+                }
+               
+            }
+        }
+    }
+
+    .powered-by {
+        @apply text-sm text-gray-700;
+    }
+
+    .icp {
+        @apply flex flex-row h-4 items-center space-x-4 text-sm text-gray-600;
+    }
 }
 
 .button {
-    @apply text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium text-center;
+    @apply text-gray-700 hover:bg-gray-700 hover:text-white px-2 py-2 rounded-md text-sm font-medium text-center;
     .disabled {
         @apply hover:text-gray-700 hover:bg-transparent;
     }

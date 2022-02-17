@@ -1,6 +1,6 @@
 {{ define "main" }}
-<main class="max-w-3xl mx-auto px-4 h-auto">
-    <ul class="divide-y divide-indigo-200">
+<main>
+    <ul>
     {{ if eq .Kind "home" -}}
       {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
     {{ else }}
@@ -9,7 +9,7 @@
     {{ range .Paginator.Pages }}
       {{ .Render "li"}}
     {{ end }}
-    </ul>
-    {{- partial "pagination.html" . -}}
+    </ul>   
 </main>
+{{- partial "pagination.html" . -}}
 {{ end }}
