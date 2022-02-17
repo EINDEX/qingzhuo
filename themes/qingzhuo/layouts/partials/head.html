@@ -1,4 +1,5 @@
-<meta charset="UTF-8">
+<meta charset="utf-8">
+
 {{ $styles := resources.Get "css/styles.scss" | toCSS | postCSS (dict "config" "./assets/css/postcss.config.js") }}
 {{ if .Site.IsServer }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}">

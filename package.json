@@ -14,5 +14,8 @@
     "postcss-cli": "^9.0.2",
     "postcss-import": "^14.0.2",
     "tailwindcss": "^2.2.19"
+  },
+  "dependencies": {
+    "heti": "^0.9.2"
   }
 }

@@ -3,6 +3,7 @@ title: "Thoughtworks 一月"
 date: 2019-07-08T14:28:37+08:00
 draft: false
 tags: Thoughtworks
+category: Note
 ---
 
 距离加入 Thoughtworks 已有一个月。

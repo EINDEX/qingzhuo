@@ -3,10 +3,13 @@ languageCode = 'cn'
 theme = 'qingzhuo'
 title = "EINDEX's Blog"
 
+paginate = 2
+
 hasCJKLanguage = true
 summaryLength = 100
 
 googleAnalytics = 'G-B4GVHJ5ND3'
+
 
 [markup]
 [markup.highlight]
@@ -27,10 +30,23 @@ mediatype = "application/rss"
 baseName = "feed"
 
 [params]
-
+baiduAnalytics = '73deedd5e22a061de8092928b65f7405'
 outdateingWarningDays = 30
+ICPNumbers = '鄂ICP备15018232号-1'
 
 [params.giscus]
 repo = "EINDEX/qingzhuo-hugo"
 repoId = "R_kgDOGWb6Yg"
 categoryId = "DIC_kwDOGWb6Ys4CAKn-"
+
+[menu]
+[[menu.navbar]]
+identifier = "about"
+name = "About Me"
+url = "/about"
+weight = -1
+
+[[menu.navbar]]
+name = "Archive"
+url = "/"
+weight = 0

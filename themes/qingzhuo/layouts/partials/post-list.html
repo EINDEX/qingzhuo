@@ -1,0 +1,11 @@
+{{ range .Paginator.Pages }}
+<li>
+    <article class="py-2 mb-1">
+    <main>
+        <h1 class="pb-2"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+        <p class="heti">{{ .Summary }}</p>
+        <a class="-mx-1 font-medium" href="{{ .RelPermalink }}">Read more →</a>
+    </main>
+    </article>
+</li>
+{{ end }}

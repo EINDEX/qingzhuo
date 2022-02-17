@@ -1,19 +1,15 @@
 {{ define "main" }}
 <main class="max-w-3xl mx-auto px-4 h-auto">
-    <ul class="divide-y divide-gray-200">
-              
-    <!-- Ranges through content/posts/*.md -->
-    {{ range .Pages }}
-        <li>
-          <article class="py-0">
-            <main>
-              <h1 class="py-2">{{ .Title }}</h1>
-              <p>{{ .Summary }}</p>
-              <a class="-mx-1 font-medium" href="{{ .RelPermalink }}">Read more →</a>
-            </main>
-          </article>
-        </li>
+    <ul class="divide-y divide-indigo-200">
+    {{ if eq .Kind "home" -}}
+      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
+    {{ else }}
+      {{ $paginator := .Paginate .Site.RegularPages }}
+    {{ end }}
+    {{ range .Paginator.Pages }}
+      {{ .Render "li"}}
     {{ end }}
     </ul>
+    {{- partial "pagination.html" . -}}
 </main>
 {{ end }}
