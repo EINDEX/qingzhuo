@@ -7,5 +7,5 @@ require (
 	github.com/spf13/viper v1.10.1
 	github.com/yuin/goldmark v1.4.7
 	gorm.io/driver/mysql v1.3.2
-	gorm.io/gorm v1.23.1
+	gorm.io/gorm v1.23.2
 )
