@@ -3,12 +3,12 @@ languageCode = 'cn'
 theme = 'qingzhuo'
 title = "EINDEX's Blog"
 
-paginate = 2
+paginate = 7
 
 hasCJKLanguage = true
 summaryLength = 100
 
-googleAnalytics = 'G-B4GVHJ5ND3'
+googleAnalytics = 'UA-80131414-1'
 
 
 [markup]
@@ -31,6 +31,7 @@ baseName = "feed"
 
 [params]
 baiduAnalytics = '73deedd5e22a061de8092928b65f7405'
+microsoftClarity = 'ao1gr1m9ku'
 outdateingWarningDays = 30
 ICPNumbers = '鄂ICP备15018232号-1'
 

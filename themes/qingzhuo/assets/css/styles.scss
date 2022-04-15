@@ -12,16 +12,19 @@ code {
     font-family: monospace, 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei', 'Arial', 'San Francisco';
 }
 
-content {
+.content {
     @apply container flex flex-col items-center justify-center;
 
     main {
-        @apply w-full px-4 sm:px-2;
+        @apply w-full px-4 sm:px-2 ;
+        ul {
+            @apply flex divide-y-2 divide-solid divide-indigo-300
+        }
     }
 }
 
 article {
-    @apply max-w-4xl my-4 heti;
+    @apply w-full my-4 heti;
 
     hr {
         width: '40%';
