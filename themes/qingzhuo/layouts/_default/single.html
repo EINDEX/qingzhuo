@@ -6,7 +6,9 @@
 <article>
     <header>
     <h1 id="title">{{ .Title }}</h1>
+    {{ if .Date  }}
     <time>{{ .Date | time.Format ":date_medium" }}</time>
+    {{ end }}
     {{- partial "expire-warning.html" . -}}
     </header>
     <main>

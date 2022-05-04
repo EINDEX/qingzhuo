@@ -11,7 +11,7 @@
       {{ range (where .Site.Menus.navbar.ByWeight "Weight" "ge" 0) }}
       <li class="button">
         <a
-          href="/about"
+          href="{{ .URL }}"
           >{{ .Name }}</a
         >
       </li>
@@ -20,7 +20,7 @@
       {{ range (where .Site.Menus.navbar.ByWeight "Weight" "lt" 0) }}
       <li class="button">
         <a
-          href="/about"
+          href="{{ .URL }}"
           >{{ .Name }}</a
         >
       </li>
