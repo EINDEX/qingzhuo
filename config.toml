@@ -1,4 +1,4 @@
-baseURL = 'https://eindex.me/'
+
 languageCode = 'cn'
 theme = 'qingzhuo'
 title = "EINDEX's Blog"
@@ -9,6 +9,7 @@ hasCJKLanguage = true
 summaryLength = 100
 
 googleAnalytics = 'UA-80131414-1'
+relativeURLS=true
 
 
 [markup]
