@@ -59,7 +59,7 @@ draft: false
 - [Github](https://github.com/eindex)
 - [Twitter](https://twitter.com/eindex_li)
 - [Telegram](https://t.me/eindex)
-- [Keybase](https://keybase.io/eindex)
+- [Keybase](https://keybase.io/eindexli)
 
 ## 最后
 
