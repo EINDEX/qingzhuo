@@ -3,6 +3,47 @@
 @import "node_modules/tailwindcss/utilities";
 @import "node_modules/heti/lib/heti";
 
+.title-area {
+    @apply flex justify-between items-end mb-2;
+
+    .title {
+        @apply text-4xl pb-0 mb-0;
+    }
+
+    .category {
+        @apply text-sm m-0 p-0;
+    }
+
+}
+
+.meta-area {
+    @apply flex flex-row items-center gap-2 pb-2;
+
+    .tag {
+        @apply flex-row justify-end;
+        
+        .tag--mark {
+            border-top: 0.625em solid transparent;
+            border-bottom: 0.625em solid transparent;
+            border-right: 0.625em solid rgb(129,140,248);
+            @apply float-left w-0 h-0;
+        }
+        .tag--text{
+            @apply text-sm float-right bg-indigo-400 px-1;
+        }
+    }   
+
+    .delimiter {
+        @apply flex-1;
+    }
+
+    time {
+        @apply text-sm justify-start;
+    }
+}
+
+
+
 body {
     font-family: 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei', 'Arial', 'San Francisco';
     @apply flex flex-col items-center justify-around space-y-4 my-4 px-4 sm:my-2 sm:px-2;
@@ -16,7 +57,8 @@ code {
     @apply container flex flex-col items-center justify-center;
 
     main {
-        @apply w-full px-4 sm:px-2 ;
+        @apply w-full px-4 sm:px-2;
+
         ul {
             @apply flex divide-y-2 divide-solid divide-indigo-300
         }
@@ -24,16 +66,12 @@ code {
 }
 
 article {
-    @apply w-full my-4 heti;
+    @apply w-full my-4;
 
     hr {
         width: '40%';
         height: 2px;
         @apply bg-indigo-200 my-2;
-    }
-
-    #title {
-        @apply text-4xl pb-2;
     }
 
     header {
@@ -50,7 +88,7 @@ article {
             height: 2px;
             @apply bg-indigo-200 my-2;
         }
-        
+
         // p {
         //     @apply py-2 text-base;
         // }
@@ -117,15 +155,15 @@ article {
 }
 
 .pagination {
-    width:  100%;
+    width: 100%;
     @apply flex justify-between max-w-xl;
 
-    .item  {
+    .item {
         @apply flex content-center;
-        .item--next {
-        }
-        .item--prev {
-        }
+
+        .item--next {}
+
+        .item--prev {}
 
         .hide {
             @apply sm:hidden;
@@ -135,7 +173,7 @@ article {
 
 .navbar {
     @apply flex max-h-fit max-w-6xl w-full justify-center place-items-center;
-    
+
     .items {
         @apply flex items-center w-full justify-between space-x-4 max-h-fit;
 
@@ -160,20 +198,23 @@ article {
         //     @apply flex;
         // }
         .item {
-            @apply flex sm:h-full  flex-row space-x-4 justify-center items-center;
+            @apply flex sm:h-full flex-row space-x-4 justify-center items-center;
 
             .avatar {
                 @apply flex-auto rounded-xl w-32;
             }
+
             .links {
                 @apply flex flex-col h-full leading-4 justify-around space-y-4;
+
                 a {
                     @apply flex flex-row gap-2 justify-start items-center text-center text-sm h-4 leading-4;
+
                     img {
                         @apply h-4 w-4
                     }
                 }
-               
+
             }
         }
     }
@@ -189,6 +230,7 @@ article {
 
 .button {
     @apply text-gray-700 hover:bg-gray-700 hover:text-white px-2 py-2 rounded-md text-sm font-medium text-center;
+
     .disabled {
         @apply hover:text-gray-700 hover:bg-transparent;
     }

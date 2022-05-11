@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main>
+    {{ $name := .Data.Plural }}
+    <h1 class="pb-2 title">{{ .Data.Singular | humanize }}: {{ .Page.Name }}</h1>
+    {{ if eq .Kind "term" }}
+        <hr>
+        <ul>
+        {{ range .Paginator.Pages }}
+            {{ .Render "li"}}
+        {{ end }}
+        </ul>
+    {{ else }}
+    <ul>
+        {{ range .Data.Terms.ByCount }}
+        <li><a href="/{{ $name }}/{{ .Name }}">{{ .Name | humanize }} {{.Count}}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</main>
+{{ end }}

@@ -3,8 +3,8 @@ title: "2021 Ending"
 date: 2021-12-29T14:08:01+08:00
 draft: false
 latex: false
-tags: Ending,"Annual Summary"
-category: "Note"
+tags: [Ending, "Annual Summary"]
+categories: "Note"
 ---
 
 2021年就要过去了，分享一下我今年都干了些什么事请。

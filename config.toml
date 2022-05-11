@@ -12,6 +12,23 @@ googleAnalytics = 'UA-80131414-1'
 relativeURLS=true
 
 
+[related]
+  includeNewer = false
+  threshold = 0
+  toLower = false
+[[related.indices]]
+  name = 'tags'
+  weight = 100
+[[related.indices]]
+  name = 'categories'
+  weight = 100
+[[related.indices]]
+  name = 'keywords'
+  weight = 100
+[[related.indices]]
+  name = 'date'
+  weight = 10
+
 [markup]
 [markup.highlight]
 style = 'monokai'
@@ -44,11 +61,16 @@ categoryId = "DIC_kwDOGWb6Ys4CAKn-"
 [menu]
 [[menu.navbar]]
 identifier = "about"
-name = "About Me"
+name = "关于"
 url = "/about"
 weight = -1
 
 [[menu.navbar]]
-name = "Archive"
+name = "友链"
+url = "/links"
+weight = -2
+
+[[menu.navbar]]
+name = "归档"
 url = "/"
-weight = 0
+weight = -3

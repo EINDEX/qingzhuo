@@ -1,6 +1,6 @@
 {{ define "main" }}
 <main>
-    <ul>
+    <ul class="divide-y divide-indigo-400">
     {{ if eq .Kind "home" -}}
       {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
     {{ else }}

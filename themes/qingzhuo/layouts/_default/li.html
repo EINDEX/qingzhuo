@@ -1,9 +1,19 @@
 <li>
     <article class="py-2 mb-1">
-    <main>
-        <h1 class="pb-2"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-        <p class="heti">{{ .Summary }}</p>
-        <a class="-mx-1 font-medium" href="{{ .RelPermalink }}">Read more →</a>
-    </main>
+        <main>
+            <section class="title-area">
+                <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+                {{ .Render "categories" }}
+            </section>
+            <section class="meta-area">
+                {{ if .Date }}
+                <time>{{ .Date | time.Format ":date_medium" }}</time>
+                {{ end }}
+                <span class="delimiter"></span>
+                {{ .Render "tag" }}
+            </section>
+            <section class="heti">{{ .Summary }}</section>
+            <a class="-mx-1 font-medium" href="{{ .RelPermalink }}">Read more →</a>
+        </main>
     </article>
 </li>

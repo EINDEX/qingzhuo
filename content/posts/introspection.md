@@ -3,8 +3,8 @@ title: "反躬自问"
 date: 2022-05-02T17:13:36+08:00
 draft: false
 latex: false
-category: Note
-tags: introspection
+categories: Note
+tags: [Introspection]
 ---
 
 
@@ -16,6 +16,7 @@ tags: introspection
 
 下面我会尝试用“自我问答”的方式，记录这次出差的体验与感想。
 
+<!--more-->
 
 ## 自问
 

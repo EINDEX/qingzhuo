@@ -2,7 +2,7 @@
 title: "Tornado Auto Etag 机制"
 date: 2019-04-24T14:20:03+08:00
 draft: false
-tags: Python,Cache,ETag
+tags: ["Python", "Cache", "ETag"]
 
 ---
 
