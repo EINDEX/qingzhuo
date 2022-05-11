@@ -15,10 +15,10 @@ draft: false
 
 我特别喜欢折腾，大部分软件相关的其实都可以在自己家里运行，于是我给自己整了一个小型的 HomeLab，它可以折腾一些软件，比如：
 
-    - K3s
-    - HomeAssistent
-    - DevSecOps pipeline
-    - Proxmox VE
+- K3s
+- HomeAssistent
+- DevSecOps pipeline
+- Proxmox VE
 
 在多层虚拟化的加持之下，以后我的计算设备更新迭代，也不会影响到我运行的一大堆服务啦。
 
