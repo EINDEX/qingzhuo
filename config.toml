@@ -62,12 +62,12 @@ categoryId = "DIC_kwDOGWb6Ys4CAKn-"
 [[menu.navbar]]
 identifier = "about"
 name = "关于"
-url = "/about"
+url = "/about/"
 weight = -1
 
 [[menu.navbar]]
 name = "友链"
-url = "/links"
+url = "/links/"
 weight = -2
 
 [[menu.navbar]]
