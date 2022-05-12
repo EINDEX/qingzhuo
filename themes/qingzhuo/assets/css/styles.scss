@@ -42,6 +42,10 @@
 // }
 
 aside {
+    .toc {
+        @apply sm:hidden;
+    }
+
     h3 {
         @apply text-xl font-semibold pb-2;
     }
@@ -163,12 +167,6 @@ code {
     font-family: monospace, 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei', 'Arial', 'San Francisco';
 }
 
-main {
-    ul {
-        @apply flex flex-col gap-4;
-    }
-}
-
 article  {
     @apply flex flex-col gap-4 w-full p-4 rounded-lg shadow-md bg-white divide-y divide-dashed;
 
@@ -235,7 +233,7 @@ article  {
         blockquote {
             @apply mx-0 px-4 bg-indigo-100 border-l-4 border-indigo-200 italic font-medium
         }
-        
+
         pre {
             font-family: 'Jetbrains Mono';
             background-color: #272822;
