@@ -37,7 +37,7 @@
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{- if $related }}
 <section>
-    <h3>推荐阅读</h3>
+    <h3>相关文章</h3>
     {{ with $related }}
     <ul>
         {{ range . }}
@@ -46,5 +46,6 @@
     </ul>
     {{ end }}
 </section>
+{{- partial "suggestion-reading.html" . -}}
 {{- end }}
 {{ end }}

@@ -16,18 +16,5 @@
 {{end}}
 
 {{define "aside"}}
-<section>
-  <h3>推荐系列</h3>
-</section>
-<section>
-  <h3>推荐阅读</h3>
-  {{ $related :=  .Site.RegularPages | shuffle | first 10 }}
-  {{ with $related }}
-  <ul class="list">
-      {{ range . }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
-  </ul>
-  {{ end }}
-</section>
+{{- partial "suggestion-reading.html" . -}}
 {{ end }}

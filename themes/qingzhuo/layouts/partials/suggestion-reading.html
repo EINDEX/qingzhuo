@@ -1,0 +1,11 @@
+<section>
+    <h3>推荐阅读</h3>
+    {{ $related :=  (where .Site.RegularPages "Type" "in" site.Params.mainSections) | shuffle | first 10 }}
+    {{ with $related }}
+    <ul class="list">
+        {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+  </section>
