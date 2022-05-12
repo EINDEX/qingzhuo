@@ -17,37 +17,22 @@
             {{ .Render "tag" }}
         </section>
     </section>
-
+    {{ $pages :=  (where .Site.RegularPages "Type" "in" site.Params.mainSections)}}
+    {{ range $pages.GroupByDate "2006" }}
     <section class="main">
-        {{- partial "expire-warning.html" . -}}
-        {{ .Content }}
+        <h3>{{ .Key }}</h3>
+        <ul class="archive-list">
+            {{ range .Pages }}
+                <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
     </section>
-    <section class="comments">
-        {{- partial "giscus.html" . -}}
-    </section>
+    {{ end }}
 </article>
 {{end}}
 
 {{ define "aside" }}
 {{- partial "suggestion-reading.html" . -}}
-<div class="affix">
-<section class="toc">
-    <h3 class="title">TOC</h3>
-    {{ .TableOfContents }}
-</section>
-
-{{ $related := .Site.RegularPages.Related . | first 5 }}
-{{- if $related }}
-<section>
-    <h3>相关文章</h3>
-    {{ with $related }}
-    <ul>
-        {{ range . }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
-    </ul>
-    {{ end }}
-</section>
-</div>
-{{- end }}
 {{ end }}

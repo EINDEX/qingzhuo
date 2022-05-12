@@ -11,6 +11,12 @@ summaryLength = 100
 googleAnalytics = 'UA-80131414-1'
 relativeURLS=true
 
+disableKinds = ['taxonomy', 'term']
+
+[taxonomies]
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'
 
 [related]
   includeNewer = false
@@ -72,5 +78,5 @@ weight = -2
 
 [[menu.navbar]]
 name = "归档"
-url = "/"
+url = "/archive/"
 weight = -3

@@ -66,7 +66,7 @@ body {
 
 
     .content {
-        @apply max-w-6xl flex flex-row mt-24 sm:flex-col gap-4 sm:px-2 px-4 w-full;
+        @apply max-w-6xl flex flex-row sm:flex-col gap-4 sm:px-2 px-4 w-full;
 
         main {
             @apply flex flex-col w-9/12 sm:w-full;
@@ -78,13 +78,17 @@ body {
             section {
                 @apply rounded-lg shadow-md bg-white p-4;
             }
+
+            .affix {
+                @apply flex flex-col top-4 gap-4 sticky sm:static;
+            }
         }
     }
     
     
 
     .navbar {
-        @apply flex fixed top-0 z-50 max-h-fit w-full justify-center place-items-center bg-white py-4 shadow-lg px-4;
+        @apply flex top-0 z-50 max-h-fit w-full justify-center place-items-center bg-white py-3 shadow-lg px-4;
     
         .items {
             @apply flex flex-row items-center max-w-6xl w-full justify-between space-x-4 max-h-fit;
