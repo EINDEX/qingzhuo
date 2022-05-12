@@ -50,9 +50,20 @@ aside {
     }
 }
 
+body::-webkit-scrollbar {
+    @apply w-1 bg-gray-100;
+}
+
+body::-webkit-scrollbar-thumb {
+    @apply w-1 bg-gray-400 rounded-sm shadow
+}
+
 body {
     font-family: 'PingFang SC', 'WenQuanYi Micro Hei', 'Microsoft Yahei', 'Arial', 'San Francisco';
     @apply flex flex-col overscroll-y-none relative items-center justify-around min-w-min bg-gray-100 gap-8;
+
+
+
 
     .content {
         @apply max-w-6xl flex flex-row mt-24 sm:flex-col gap-4 sm:px-2 px-4 w-full;
