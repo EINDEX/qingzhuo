@@ -6,7 +6,7 @@
             class="avatar"
             src="/img/avatar.png"
             alt="Workflow"
-        /><span class="site-name">EINDEX's Blog</span></a>
+        /><span class="site-name">{{ .Site.Title }}</span></a>
       </li>
       {{ range (where .Site.Menus.navbar.ByWeight "Weight" "ge" 0) }}
       <li class="button">

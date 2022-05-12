@@ -29,7 +29,9 @@
 {{end}}
 
 {{ define "aside" }}
-<section>
+{{- partial "suggestion-reading.html" . -}}
+
+<section class="toc">
     <h3 class="title">TOC</h3>
     {{ .TableOfContents }}
 </section>
@@ -46,6 +48,6 @@
     </ul>
     {{ end }}
 </section>
-{{- partial "suggestion-reading.html" . -}}
+
 {{- end }}
 {{ end }}
