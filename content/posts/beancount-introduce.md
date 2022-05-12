@@ -2,6 +2,7 @@
 title: "复式记账工具 Beancount"
 date: 2019-11-30T00:00:00+08:00
 draft: false
+categories: "投资"
 tags: [Beancount]
 ---
 

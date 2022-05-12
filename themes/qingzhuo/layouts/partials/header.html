@@ -1,12 +1,12 @@
 <nav class="navbar">
     <ul class="items">
       <li>
-        <a href="/"
+        <a class="site-link" href="/"
           ><img
             class="avatar"
             src="/img/avatar.png"
             alt="Workflow"
-        /></a>
+        /><span class="site-name">EINDEX's Blog</span></a>
       </li>
       {{ range (where .Site.Menus.navbar.ByWeight "Weight" "ge" 0) }}
       <li class="button">

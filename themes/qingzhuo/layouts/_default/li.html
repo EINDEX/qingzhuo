@@ -1,6 +1,6 @@
 <li>
-    <article class="py-2 mb-1">
-        <main>
+    <article>
+        <section class="header">
             <section class="title-area">
                 <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
                 {{ .Render "categories" }}
@@ -12,8 +12,11 @@
                 <span class="delimiter"></span>
                 {{ .Render "tag" }}
             </section>
-            <section class="heti">{{ .Summary }}</section>
+        </section>
+        <section class="main">
+            {{ .Summary }}
             <a class="-mx-1 font-medium" href="{{ .RelPermalink }}">Read more →</a>
-        </main>
+        </section>
+        
     </article>
 </li>

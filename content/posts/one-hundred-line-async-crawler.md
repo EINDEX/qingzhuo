@@ -3,6 +3,7 @@ title: "一百行代码实现异步爬虫"
 date: 2019-09-07T12:17:25+08:00
 draft: false
 tags: [Python, Crawler, Async]
+categories: "代码"
 ---
 
 一个优雅的爬虫需要一下这些东西：

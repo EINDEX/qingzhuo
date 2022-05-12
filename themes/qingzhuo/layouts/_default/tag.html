@@ -1,7 +1,5 @@
 {{ if .Params.tags }}    
-{{/*  <div class="tags">  */}}
     {{ range .Params.tags }}
-        <span class="tag"><div class="tag--mark"></div><span class="tag--text">{{ . }}</span></span>
+        <span class="tag">{{ . }}</span>
     {{ end }}
-{{/*  </div>  */}}
 {{ end }}

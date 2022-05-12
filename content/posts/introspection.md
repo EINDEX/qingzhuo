@@ -3,7 +3,7 @@ title: "反躬自问"
 date: 2022-05-02T17:13:36+08:00
 draft: false
 latex: false
-categories: Note
+categories: "随笔"
 tags: [Introspection]
 ---
 

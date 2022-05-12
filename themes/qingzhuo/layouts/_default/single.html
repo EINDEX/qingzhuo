@@ -1,43 +1,50 @@
 {{ define "head" }}
-    <meta name="description" content="{{ .Summary }}">
+<meta name="description" content="{{ .Summary }}">
 {{ end }}
 
 {{ define "main" }}
 <article>
-    <header>
-    <section class="title-area">
-        <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-        {{ .Render "categories" }}
-    </section>
-    <section class="meta-area">
-        {{ if .Date }}
-        <time>{{ .Date | time.Format ":date_medium" }}</time>
-        {{ end }}
-        <span class="delimiter"></span>
-        {{ .Render "tag" }}
-    </section>
-    <main class="heti">
-    {{ .Content }}
-    </main>
-    {{/*  <aside>
-        <section>
-            <h3>TOC</h3>
-            {{ .TableOfContents }}
+    <section class="header">
+        <section class="title-area">
+            <h1 class="title"><a href="{{ .RelPermalink }}/">{{ .Title }}</a></h1>
+            {{ .Render "categories" }}
         </section>
-        <section>
-            <h3>See Also</h3>
-            {{ $related := .Site.RegularPages.Related . | first 5 }}
-            {{ with $related }}
-            <ul>
-                {{ range . }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                {{ end }}
-            </ul>
-        {{ end }}
+        <section class="meta-area">
+            {{ if .Date }}
+            <time>{{ .Date | time.Format ":date_medium" }}</time>
+            {{ end }}
+            <span class="delimiter"></span>
+            {{ .Render "tag" }}
         </section>
-    </aside>  */}}
-    <footer>
-    {{- partial "giscus.html" . -}}
-    </footer>
+    </section>
+
+    <section class="main">
+        {{- partial "expire-warning.html" . -}}
+        {{ .Content }}
+    </section>
+    <section class="comments">
+        {{- partial "giscus.html" . -}}
+    </section>
 </article>
+{{end}}
+
+{{ define "aside" }}
+<section>
+    <h3 class="title">TOC</h3>
+    {{ .TableOfContents }}
+</section>
+
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{- if $related }}
+<section>
+    <h3>推荐阅读</h3>
+    {{ with $related }}
+    <ul>
+        {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</section>
+{{- end }}
 {{ end }}

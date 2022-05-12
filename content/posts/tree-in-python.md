@@ -3,7 +3,7 @@ title: "Tree in Python"
 date: 2018-04-08T14:30:44+08:00
 draft: false
 tags: [Python]
-categories: "Algorithm"
+categories: "算法"
 ---
 
 树是计算机科学中常用的数据结构之一,常见的地方有，Java 的继承树等。

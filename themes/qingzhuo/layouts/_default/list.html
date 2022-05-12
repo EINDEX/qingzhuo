@@ -1,5 +1,7 @@
+{{ define "head" }}
+{{ end }}
+
 {{ define "main" }}
-<main>
     <ul class="divide-y divide-indigo-400">
     {{ if eq .Kind "home" -}}
       {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
@@ -10,6 +12,22 @@
       {{ .Render "li"}}
     {{ end }}
     </ul>   
-</main>
-{{- partial "pagination.html" . -}}
+    {{- partial "pagination.html" . -}}
+{{end}}
+
+{{define "aside"}}
+<section>
+  <h3>推荐系列</h3>
+</section>
+<section>
+  <h3>推荐阅读</h3>
+  {{ $related :=  .Site.RegularPages | shuffle | first 10 }}
+  {{ with $related }}
+  <ul class="list">
+      {{ range . }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+  </ul>
+  {{ end }}
+</section>
 {{ end }}
