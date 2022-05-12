@@ -2,7 +2,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <ul class="divide-y divide-indigo-400">
+    <ul class="posts">
     {{ if eq .Kind "home" -}}
       {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
     {{ else }}
