@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-<article>
+<article data-clarity-region="article">
     <section class="header">
         <section class="title-area">
             <h1 class="title"><a href="{{ .RelPermalink }}/">{{ .Title }}</a></h1>
@@ -32,7 +32,7 @@
 {{- partial "suggestion-reading.html" . -}}
 <div class="affix">
 <section class="toc">
-    <h3 class="title">TOC</h3>
+    <h3 class="title">目录</h3>
     {{ .TableOfContents }}
 </section>
 

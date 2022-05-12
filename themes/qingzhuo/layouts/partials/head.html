@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+<meta content="text/html" charset="utf-8">
 
 {{ $styles := resources.Get "css/styles.scss" | toCSS | postCSS (dict "config" "./assets/css/postcss.config.js") }}
 {{ if .Site.IsServer }}
@@ -9,10 +9,13 @@
 {{ end }}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.ico">
-<title>{{ .Title }}</title>
+
+{{ if eq .Title .Site.Title }}
+<title>{{ .Title }} </title>
+{{ else }}
+<title>{{ .Title }} | {{ .Site.Title }} </title>
+{{ end }}
+
 {{ if eq .Params.latex true }}
   {{- partial "katax.html" . -}}
 {{end}}
-{{- partial "microsoft-clarity.html" . -}}
-{{- partial "baidu-analytics.html" . -}}
-{{- partial "google-analytics.html" . -}}
