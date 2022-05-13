@@ -7,19 +7,43 @@ A clean, modern blog theme for hugo. [Demo](https://eindex.github.io/qingzhuo)
 
 ## Quick Start
 
+### AS Theme (recommended)
+```shell
+git submodule add https://github.com/eindex/qingzhuo themes/qingzhuo
+cp themes/qingzhuo/config.toml .
+```
+
+```shell
+hugo mod npm pack
+npm install
+```
+
 ### As Project
 
 ```
+git clone https://github.com/eindex/qingzhuo blog && cd blog
 npm install
-hugo server
 ```
 
-### AS Theme
-TBD
+### Before Build
+
+Edit `config.toml` content to adjust the theme and enable functions.
+
+(AS Project) remove theme in `config.toml` file.
+
+run `hugo` to gerenate the static files or `hugo server` to start server.
 
 ## How to update
 
-TBD
+### As Theme (recommended)
+
+```shell
+git submodule update
+```
+
+### As Project 
+
+merge changes form [qingzhuo](https://github.com/eindex/qingzhuo)
 
 ## Functions
 
@@ -44,7 +68,7 @@ TBD
 ### TODO
 - i18n support
 - gallery page for photos
-
+- enhancement 404 page
 
 ## Who using this theme?
 
