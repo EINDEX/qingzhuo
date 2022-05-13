@@ -2,6 +2,9 @@
 
 A clean, modern blog theme for hugo. [Demo](https://eindex.github.io/qingzhuo)
 
+[![Status](https://github.com/EINDEX/qingzhuo/actions/workflows/build.yaml/badge.svg)](https://github.com/EINDEX/qingzhuo/actions/workflows/build.yaml)
+
+
 ## Quick Start
 
 ### As Project
@@ -38,11 +41,16 @@ TBD
 - Chinese ICP Number
 - BuSuanZi Visit Counter
 
+### TODO
+- i18n support
+- gallery page for photos
+
 
 ## Who using this theme?
 
 - [EINDEX's Blog](https://eindex.me)
 
+If you are using this theme, please create pull request adding your site here.
 
 ## Screen Shots
 
