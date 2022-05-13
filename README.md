@@ -66,4 +66,4 @@ If you are using this theme, please create pull request adding your site here.
 - heti
 
 ## License
-MIT License
+GPL v3 License
