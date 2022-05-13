@@ -55,7 +55,7 @@ If you are using this theme, please create pull request adding your site here.
 ## Screen Shots
 
 ### Homepage
-![](/docs/imgs/home-page.jpg)
+![](/docs/imgs/index-page.jpg)
 
 ### Archive
 ![](/docs/imgs/archive-page.jpg)
