@@ -55,10 +55,10 @@ If you are using this theme, please create pull request adding your site here.
 ## Screen Shots
 
 ### Homepage
-![](/docs/imgs/home-page.png)
+![](/docs/imgs/home-page.jpg)
 
 ### Archive
-![](/docs/imgs/archive-page.png)
+![](/docs/imgs/archive-page.jpg)
 
 ## Thanks
 - hugo
