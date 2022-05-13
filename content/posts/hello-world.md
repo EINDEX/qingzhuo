@@ -1,6 +1,6 @@
 ---
 title: "Hello World"
-date: 2022-05-13T11:33:44+08:00
+date: 1971-01-01T00:00:00+00:00
 draft: true
 latex: false
 categoies: theme
