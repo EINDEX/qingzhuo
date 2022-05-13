@@ -16,7 +16,6 @@ disableKinds = ['taxonomy', 'term']
   series = 'series'
   tag = 'tags'
 
-
 ## RSS support default open
 [outputs]
 home = [ "RSS", "HTML"]
@@ -58,6 +57,22 @@ ICPNumbers = ''
 
 ## BuSuanZi Visit Counter
 BuSuanZi = false
+
+
+## support type list: github, weibo, twitter, telegram, qq, wechat, website
+## support link or value
+[[params.socialaccount]]
+link = 'https://github.com/eindex'
+type = 'github'
+[[params.socialaccount]]
+link = 'https://twitter.comeindex_li'
+type = 'twitter'
+[[params.socialaccount]]
+link = 'https://t.me/eindex'
+type = 'telegram'
+[[params.socialaccount]]
+link = 'eindex.me@outlook.com'
+type = 'email'
 
 ## Giscus
 [params.giscus]

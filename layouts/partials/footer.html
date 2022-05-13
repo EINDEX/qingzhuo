@@ -3,22 +3,23 @@
     <div class="item"></div>
     <div class="item"></div>
     <div class="item profile">
-      <img class="avatar" src="/img/avatar.png" />
+      {{ $avatar := resources.Get "images/avatar.png" }}
+      <img class="avatar" src="{{ $avatar.RelPermalink }}" />
       <ul class="links">
+        {{ range .Site.Params.socialaccount }}
         <li>
-          <a href="https://github.com/eindex" rel="noreferrer" target="_blank"
-            ><img src="/img/github.svg" /> <span>Github</span>
+          {{ $imgurl := printf "images/%s.svg" .type }}
+          {{ $img := resources.Get $imgurl }}
+          <a href="{{ .link }}" rel="noreferrer" target="_blank"
+            ><img src="{{ $img.RelPermalink }}" /> <span>{{ .type | humanize }}</span>
           </a>
         </li>
-        <li>
-          <a href="mailto:eindex.me@outlook.com" target="_blank"
-            ><img src="/img/icon-mail.svg" />
-            <span>Email</span>
-          </a>
-          </li>
+        {{ end }}
           <li>
-          <a href="/feed.xml" target="_blank"
-            ><img src="/img/rss.svg" />
+          {{ $rssimg := resources.Get "images/rss.svg" }}
+          {{ $rss_link := .Site.GetPage "{{ .Site.OutputFormats.RSS.baseName }}.xml" }}
+          <a href="{{ printf "%s/s" .Site.BaseURL "feed.xml"}}" target="_blank"
+            ><img src="{{ $rssimg.RelPermalink }}" />
             <span>RSS</span>
           </a>
           </li>
@@ -27,7 +28,7 @@
   </div>
   <a
     class="powered-by"
-    href="https://github.com/EINDEX/qing-zhuo"
+    href="https://github.com/EINDEX/qingzhuo"
     target="_blank"
     >Powered By QingZhuo
   </a>

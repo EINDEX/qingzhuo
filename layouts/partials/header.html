@@ -1,10 +1,11 @@
 <nav class="navbar">
     <ul class="items">
       <li>
+        {{ $avatar := resources.Get "images/avatar.png" }}
         <a class="site-link" href="/"
           ><img
             class="avatar"
-            src="/img/avatar.png"
+            src="{{ $avatar.RelPermalink }}"
             alt="Workflow"
         /><span class="site-name">{{ .Site.Title }}</span></a>
       </li>
