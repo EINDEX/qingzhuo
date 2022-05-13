@@ -1,6 +1,8 @@
 ---
-title: "归档"
+title: "Arcguve"
 layout: archive
 hidden: true
-summary: 这里是存放所有博客文章的地方。
+summary: A place storage all blog here.
 ---
+
+<!-- this page is use to enable archive page -->

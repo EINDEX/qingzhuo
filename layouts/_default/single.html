@@ -22,9 +22,11 @@
         {{- partial "expire-warning.html" . -}}
         {{ .Content }}
     </section>
+    {{- if .Site.Params.Giscus.Repo }}
     <section class="comments">
         {{- partial "giscus.html" . -}}
     </section>
+    {{- end }}
 </article>
 {{end}}
 
@@ -32,14 +34,14 @@
 {{- partial "suggestion-reading.html" . -}}
 <div class="affix">
 <section class="toc">
-    <h3 class="title">目录</h3>
+    <h3 class="title">TOC</h3>
     {{ .TableOfContents }}
 </section>
 
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{- if $related }}
 <section>
-    <h3>相关文章</h3>
+    <h3>Related Post</h3>
     {{ with $related }}
     <ul>
         {{ range . }}

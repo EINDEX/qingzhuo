@@ -1,15 +1,11 @@
 
 languageCode = 'cn'
-theme = 'qingzhuo'
-title = "EINDEX's Blog"
+title = "QingZhuo Hugo theme"
 
-paginate = 7
+paginate = 10 # default page size
 
-hasCJKLanguage = true
-summaryLength = 100
-
-googleAnalytics = 'UA-80131414-1'
-relativeURLS=true
+hasCJKLanguage = true # CJK support
+summaryLength = 100 # default summary length
 
 disableKinds = ['taxonomy', 'term']
 
@@ -17,6 +13,71 @@ disableKinds = ['taxonomy', 'term']
   category = 'categories'
   series = 'series'
   tag = 'tags'
+
+
+## RSS support default open
+[outputs]
+home = [ "RSS", "HTML"]
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "feed"
+
+## menus in navbar
+[menu]
+[[menu.navbar]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = -1
+
+[[menu.navbar]]
+name = "Archive"
+url = "/archive/"
+weight = -2
+
+
+[params]
+# Time to start show outdate warning, 0 to close.
+outdateingWarningDays = 0
+
+## Baidu Analytics
+baiduAnalytics = ''
+
+## Microsoft clarify
+microsoftClarity = ''
+
+## Google Analytics
+googleAnalytics = ''
+
+## ICP infomation China mainland only
+ICPNumbers = ''
+
+## BuSuanZi Visit Counter
+BuSuanZi = false
+
+## Giscus
+[params.giscus]
+repo = ""
+repoId = ""
+categoryId = ""
+
+
+## Markup Configurations
+[markup]
+
+### Code Highlighting
+[markup.highlight]
+style = 'monokai'
+tabWidth = 4
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+## hugo related logic
+## https://gohugo.io/content-management/related/
 
 [related]
   includeNewer = false
@@ -34,49 +95,3 @@ disableKinds = ['taxonomy', 'term']
 [[related.indices]]
   name = 'date'
   weight = 10
-
-[markup]
-[markup.highlight]
-style = 'monokai'
-tabWidth = 4
-
-[markup.goldmark]
-[markup.goldmark.renderer]
-unsafe = true
-
-
-[outputs]
-home = [ "RSS", "HTML"]
-
-[outputFormats]
-[outputFormats.RSS]
-mediatype = "application/rss"
-baseName = "feed"
-
-[params]
-baiduAnalytics = '73deedd5e22a061de8092928b65f7405'
-microsoftClarity = 'ao1gr1m9ku'
-outdateingWarningDays = 30
-ICPNumbers = '鄂ICP备15018232号-1'
-
-[params.giscus]
-repo = "EINDEX/blog"
-repoId = "R_kgDOGWb6Yg"
-categoryId = "DIC_kwDOGWb6Ys4CAKn-"
-
-[menu]
-[[menu.navbar]]
-identifier = "about"
-name = "关于"
-url = "/about/"
-weight = -1
-
-[[menu.navbar]]
-name = "友链"
-url = "/links/"
-weight = -2
-
-[[menu.navbar]]
-name = "归档"
-url = "/archive/"
-weight = -3
