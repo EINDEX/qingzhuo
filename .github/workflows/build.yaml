@@ -31,10 +31,10 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
 
-    - name: Build the site via hugo and npm
-      run: |
-        npm install
-        hugo build -D --minify
+    - name: Fetch npm packages
+      run: npm ci
+    - name: build site
+      run: hugo -D --minify
 
     - name: Publish
       uses: peaceiris/actions-gh-pages@v3
