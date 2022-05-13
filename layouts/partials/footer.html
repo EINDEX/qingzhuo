@@ -18,7 +18,7 @@
           <li>
           {{ $rssimg := resources.Get "images/rss.svg" }}
           {{ $rss_link := .Site.GetPage "{{ .Site.OutputFormats.RSS.baseName }}.xml" }}
-          <a href="{{ printf "%s/s" .Site.BaseURL "feed.xml"}}" target="_blank"
+          <a href="{{ printf "%sfeed.xml" .Site.BaseURL }}" target="_blank"
             ><img src="{{ $rssimg.RelPermalink }}" />
             <span>RSS</span>
           </a>

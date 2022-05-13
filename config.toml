@@ -2,7 +2,7 @@
 languageCode = 'cn'
 title = "QingZhuo Hugo theme"
 
-# baseURL = "https://eindex.github.io/qingzhuo/"
+# baseURL = "https://eindex.github.io/qingzhuo"
 
 paginate = 10 # default page size
 
@@ -65,13 +65,13 @@ BuSuanZi = false
 link = 'https://github.com/eindex'
 type = 'github'
 [[params.socialaccount]]
-link = 'https://twitter.comeindex_li'
+link = 'https://twitter.com/eindex_li'
 type = 'twitter'
 [[params.socialaccount]]
 link = 'https://t.me/eindex'
 type = 'telegram'
 [[params.socialaccount]]
-link = 'eindex.me@outlook.com'
+link = 'mailto:eindex.me@outlook.com'
 type = 'email'
 
 ## Giscus
