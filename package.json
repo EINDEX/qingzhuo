@@ -1,17 +1,23 @@
 {
-  "name": "qingzhuo",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "concurrently npm:watch:*",
-    "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
-    "watch:hugo": "hugo server",
-    "build": "hugo --minify",
-    "publish": "bash scripts/publish.sh"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
+  "comments": {
+    "dependencies": {
+      "heti": "project"
+    },
+    "devDependencies": {
+      "@tailwindcss/typography": "project",
+      "autoprefixer": "project",
+      "concurrently": "project",
+      "postcss": "project",
+      "postcss-cli": "project",
+      "postcss-import": "project",
+      "tailwindcss": "project"
+    }
+  },
+  "dependencies": {
+    "heti": "^0.9.2"
+  },
+  "description": "",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.1",
     "autoprefixer": "^10.4.7",
@@ -21,7 +27,15 @@
     "postcss-import": "^14.0.2",
     "tailwindcss": "^3.0.24"
   },
-  "dependencies": {
-    "heti": "^0.9.2"
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "qingzhuo",
+  "scripts": {
+    "build": "hugo --minify",
+    "publish": "bash scripts/publish.sh",
+    "start": "concurrently npm:watch:*",
+    "watch:hugo": "hugo server",
+    "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch"
   }
 }
