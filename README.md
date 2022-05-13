@@ -46,5 +46,16 @@ TBD
 
 ## Screen Shots
 
+### Homepage
+![](/docs/imgs/home-page.png)
+
+### Archive
+![](/docs/imgs/archive-page.png)
+
+## Thanks
+- hugo
+- tailwindcss
+- heti
+
 ## License
 MIT License
