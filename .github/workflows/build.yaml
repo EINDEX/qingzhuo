@@ -34,7 +34,7 @@ jobs:
     - name: Fetch npm packages
       run: npm ci
     - name: build site
-      run: hugo -D --minify
+      run: hugo -D --minify -b "https://eindex.github.io/qingzhuo/"
 
     - name: Publish
       uses: peaceiris/actions-gh-pages@v3

@@ -1,6 +1,6 @@
 # Qing Zhuo
 
-A clean, modern blog theme for hugo. [Demo](https://qingzhuo.github.io/)
+A clean, modern blog theme for hugo. [Demo](https://eindex.github.io/qingzhuo)
 
 ## Quick Start
 

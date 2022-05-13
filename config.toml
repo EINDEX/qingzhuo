@@ -2,6 +2,8 @@
 languageCode = 'cn'
 title = "QingZhuo Hugo theme"
 
+# baseURL = "https://eindex.github.io/qingzhuo/"
+
 paginate = 10 # default page size
 
 hasCJKLanguage = true # CJK support
