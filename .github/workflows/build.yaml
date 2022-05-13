@@ -11,11 +11,6 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
 
     steps:
-    - name: install dependency
-      run: |
-        apt update
-        apt install hugo nodejs
-
     - uses: actions/checkout@v3
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
