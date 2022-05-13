@@ -47,8 +47,6 @@ body {
         
     }
     
-    
-
     .navbar {
         @apply flex top-0 z-50 max-h-fit w-full justify-center place-items-center bg-white py-3 shadow-lg px-4;
     
@@ -77,7 +75,6 @@ body {
             }
         }
     }
-    
 
     .footer {
         @apply flex flex-col w-full space-y-2 justify-center items-center pb-4 px-4;

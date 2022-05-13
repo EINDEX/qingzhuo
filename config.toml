@@ -60,7 +60,7 @@ outdateingWarningDays = 30
 ICPNumbers = '鄂ICP备15018232号-1'
 
 [params.giscus]
-repo = "EINDEX/qingzhuo-hugo"
+repo = "EINDEX/blog"
 repoId = "R_kgDOGWb6Yg"
 categoryId = "DIC_kwDOGWb6Ys4CAKn-"
 
