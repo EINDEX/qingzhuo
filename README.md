@@ -38,12 +38,12 @@ run `hugo` to gerenate the static files or `hugo server` to start server.
 ### As Theme (recommended)
 
 ```shell
-git submodule update
+git submodule update --init --remote
 ```
 
 ### As Project 
 
-merge changes form [qingzhuo](https://github.com/eindex/qingzhuo)
+Merge changes form [qingzhuo](https://github.com/eindex/qingzhuo) via git.
 
 ## Functions
 
