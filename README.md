@@ -29,7 +29,7 @@ npm install
 
 Edit `config.toml` content to adjust the theme and enable functions.
 
-(AS Project) remove theme in `config.toml` file.
+(AS Theme) Uncomment theme in `config.toml` file.
 
 run `hugo` to gerenate the static files or `hugo server` to start server.
 

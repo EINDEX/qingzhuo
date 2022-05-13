@@ -3,7 +3,7 @@ languageCode = 'cn'
 title = "QingZhuo Hugo theme"
 
 # baseURL = "https://eindex.github.io/qingzhuo"
-theme = "qingzhuo" # remove when you using as project mode.
+# theme = "qingzhuo" # uncomment when you using as theme mode.
 
 paginate = 10 # default page size
 
