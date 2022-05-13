@@ -1,6 +1,4 @@
 name: Build Demo on Github Pages
-description: |
-  build demo env and publish to Github.
 
 on:
   push:
