@@ -2,8 +2,7 @@
     <ul class="items">
       <li>
         {{ $avatar := resources.Get "images/avatar.png" }}
-        <a class="site-link" href="/"
-          ><img
+        <a class="site-link" href="{{ .Site.BaseURL }}"><img
             class="avatar"
             src="{{ $avatar.RelPermalink }}"
             alt="Workflow"
