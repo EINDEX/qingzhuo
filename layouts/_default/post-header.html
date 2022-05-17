@@ -9,7 +9,7 @@
     {{ if eq .Kind "term" }}<span>{{ i18n .Data.Singular }}</span>{{end}}
     <h1 class="title">   
       <a href="{{ .RelPermalink }}/"
-        >{{i18n (urlize .Title) | default (humanize .Title)}}</a
+        >{{i18n (urlize .Title) | default .Title}}</a
       >
     </h1>
   </section>
