@@ -64,9 +64,9 @@ Merge changes form [qingzhuo](https://github.com/eindex/qingzhuo) via git.
 - Heti style
 - Chinese ICP Number
 - BuSuanZi Visit Counter
+- i18n support
 
 ### TODO
-- i18n support
 - gallery page for photos
 - enhancement 404 page
 
