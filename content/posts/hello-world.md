@@ -3,7 +3,7 @@ title: "Hello World"
 date: 1971-01-01T00:00:00+00:00
 draft: true
 latex: false
-categoies: theme
+categories: theme
 series: qingzhuo
 tags: [hello world, hugo, qingzhuo] 
 ---

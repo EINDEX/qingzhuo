@@ -16,6 +16,5 @@
 <title>{{ .Title }} | {{ .Site.Title }} </title>
 {{ end }}
 
-{{ if eq .Params.latex true }}
-  {{- partial "katax.html" . -}}
-{{end}}
+{{- partial "font-awesome.html" . -}}
+{{- partial "katax.html" . -}}

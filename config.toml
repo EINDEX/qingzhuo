@@ -1,5 +1,7 @@
 
-languageCode = 'cn'
+languageCode = 'zh-cn'
+DefaultContentLanguage = 'zh-cn'
+
 title = "QingZhuo Hugo theme"
 
 # baseURL = "https://eindex.github.io/qingzhuo"
@@ -8,9 +10,16 @@ title = "QingZhuo Hugo theme"
 paginate = 10 # default page size
 
 hasCJKLanguage = true # CJK support
-summaryLength = 100 # default summary length
+summaryLength = 70 # default summary length
 
-disableKinds = ['taxonomy', 'term']
+# defaultContentLanguageInSubdir = true
+# [languages]
+# [languages.en]
+# languageName = "English"
+# weight = 2
+# [languages.zh-cn]
+# languageName = "简体中文"
+# weight = 1
 
 [taxonomies]
   category = 'categories'
@@ -32,17 +41,18 @@ baseName = "feed"
 identifier = "about"
 name = "About"
 url = "/about/"
-weight = -1
+weight = 2
 
 [[menu.navbar]]
+identifier = "archive"
 name = "Archive"
 url = "/archive/"
-weight = -2
+weight = 1
 
 
 [params]
 # Time to start show outdate warning, 0 to close.
-outdateingWarningDays = 0
+outdateingWarningDays = 30
 
 ## Baidu Analytics
 baiduAnalytics = ''
@@ -60,20 +70,23 @@ ICPNumbers = ''
 BuSuanZi = false
 
 
-## support type list: github, weibo, twitter, telegram, qq, wechat, website
-## support link or value
+## support font awesome
 [[params.socialaccount]]
 link = 'https://github.com/eindex'
-type = 'github'
+icon = 'fab fa-github'
+label = 'Github'
 [[params.socialaccount]]
 link = 'https://twitter.com/eindex_li'
-type = 'twitter'
+icon = 'fab fa-twitter'
+label = 'Twitter'
 [[params.socialaccount]]
 link = 'https://t.me/eindex'
-type = 'telegram'
+icon = 'fab fa-telegram'
+label = 'Telegram'
 [[params.socialaccount]]
 link = 'mailto:eindex.me@outlook.com'
-type = 'email'
+icon = 'fas fa-envelope'
+label = 'Email'
 
 ## Giscus
 [params.giscus]
@@ -113,7 +126,3 @@ unsafe = true
 [[related.indices]]
   name = 'date'
   weight = 10
-
-
-[build]
-writeStats = true

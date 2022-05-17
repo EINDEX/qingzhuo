@@ -27,7 +27,7 @@ body {
             @apply flex flex-col w-3/12 sm:w-full gap-4;
 
             section {
-                @apply rounded-lg shadow-md bg-white p-4;
+                @apply  rounded-lg shadow-md bg-white p-4 prose prose-gray prose-a:no-underline ;
             }
 
             .affix {
@@ -38,10 +38,10 @@ body {
             }
         
             h3 {
-                @apply text-xl font-semibold pb-2;
+                @apply text-lg font-medium;
             }
             ul {
-                @apply list-outside list-disc pl-4;
+                @apply leading-5 list-outside pl-4;
             }
         }
         
@@ -80,7 +80,7 @@ body {
         @apply flex flex-col w-full space-y-2 justify-center items-center pb-4 px-4;
     
         .content {
-            @apply flex flex-row sm:flex-col sm:w-full sm:h-full sm:space-x-4 max-w-6xl w-full justify-between sm:items-center space-x-4;
+            @apply pb-2 flex flex-row sm:flex-col sm:w-full sm:h-full sm:space-x-4 max-w-6xl w-full justify-between sm:items-center space-x-4;
 
             .item {
                 @apply flex sm:h-full flex-row space-x-4 justify-center items-center;
@@ -90,21 +90,15 @@ body {
                 }
     
                 .links {
-                    @apply flex flex-col h-full leading-4 justify-around space-y-4;
-    
-                    a {
-                        @apply flex flex-row gap-2 justify-start items-center text-center text-sm h-4 leading-4;
-    
-                        img {
-                            @apply h-4 w-4
-                        }
-                    }
-    
+                    @apply flex flex-col h-full leading-4 text-sm justify-evenly space-y-4;
                 }
             }
         }
     
         .powered-by {
+            @apply text-sm text-gray-700;
+        }
+        .rss {
             @apply text-sm text-gray-700;
         }
     

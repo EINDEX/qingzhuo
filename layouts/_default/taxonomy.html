@@ -1,20 +1,38 @@
 {{ define "main" }}
 {{ $name := .Data.Plural }}
+<article>
 {{ if eq .Kind "term" }}
-    <h1 class="pb-4 title">{{ .Data.Singular | humanize }}: {{ .Page.Name }}</h1>
-    <ul>
-    {{ range .Paginator.Pages }}
-        {{ .Render "li"}}
-    {{ end }}
-    </ul>
+        {{ .Render "post-header" }}
+        {{ if .Content }}
+        <section class="main">
+            {{.Content}}
+        </section>
+        {{ end }}
+        <section class="post-list">
+            <ul>
+                {{ range .Pages }}
+                    <li>
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </section>
+   
 {{ else }}
-<ul>
-    {{ .Page.Name }}
-    {{ range .Data.Terms.ByCount }}
-    <li><a href="/{{ $name }}/{{ .Name }}">{{ .Name | humanize }} {{.Count}}</a></li>
-    {{ end }}
-</ul>
+{{ .Render "post-header" }}
+{{ range $key,$value := .Data.Terms }}
+<section class="taxonomy-list">
+    <h3 class="title"><a href="/{{ $name }}/{{ $key | urlize }}">{{ $key | humanize }}</a></h3>
+    <ul class="post-list">
+        {{ range $value.Pages | first 5 }}
+            <li><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+    </ul>
+    <a class="more" href="/{{ $name }}/{{ $key | urlize }}">More >></a>
+</section>
 {{ end }}
+{{ end }}
+</article>
 {{ end }}
 
 {{define "aside"}}

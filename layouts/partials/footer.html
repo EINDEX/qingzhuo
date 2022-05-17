@@ -1,6 +1,7 @@
 <footer class="footer">
   <div class="content">
-    <div class="item"></div>
+    <div class="item">
+    </div>
     <div class="item"></div>
     <div class="item profile">
       {{ $avatar := resources.Get "images/avatar.png" }}
@@ -8,24 +9,19 @@
       <ul class="links">
         {{ range .Site.Params.socialaccount }}
         <li>
-          {{ $imgurl := printf "images/%s.svg" .type }}
-          {{ $img := resources.Get $imgurl }}
           <a href="{{ .link }}" rel="noreferrer" target="_blank"
-            ><img src="{{ $img.RelPermalink }}" /> <span>{{ .type | humanize }}</span>
+            >{{ partial "fa-icon" .icon}} <span>{{ .label }}</span>
           </a>
         </li>
         {{ end }}
-          <li>
-          {{ $rssimg := resources.Get "images/rss.svg" }}
-          {{ $rss_link := .Site.GetPage "{{ .Site.OutputFormats.RSS.baseName }}.xml" }}
-          <a href="{{ printf "%sfeed.xml" .Site.BaseURL }}" target="_blank"
-            ><img src="{{ $rssimg.RelPermalink }}" />
-            <span>RSS</span>
-          </a>
-          </li>
       </ul>
     </div>
   </div>
+  {{ $rss_link := .Site.GetPage "{{ .Site.OutputFormats.RSS.baseName }}.xml" }}
+  <a class="rss" href="{{ printf "%sfeed.xml" .Site.BaseURL }}" target="_blank"
+    >{{ partial "fa-icon" "fas fa-rss"}}
+    <span>RSS</span>
+  </a>
   <a
     class="powered-by"
     href="https://github.com/EINDEX/qingzhuo"

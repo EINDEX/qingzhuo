@@ -4,23 +4,14 @@
 
 {{ define "main" }}
 <article data-clarity-region="article">
-    <section class="header">
-        <section class="title-area">
-            <h1 class="title"><a href="{{ .RelPermalink }}/">{{ .Title }}</a></h1>
-            {{ .Render "categories" }}
-        </section>
-        <section class="meta-area">
-            {{ if .Date }}
-            <time>{{ .Date | time.Format ":date_medium" }}</time>
-            {{ end }}
-            <span class="delimiter"></span>
-            {{ .Render "tag" }}
-        </section>
-    </section>
-
+    {{ .Render "post-header" }}
     <section class="main">
         {{- partial "expire-warning.html" . -}}
         {{ .Content }}
+    </section>
+    <section class="post-footer">
+        {{- partial "prev-next-page.html" . -}}
+        {{ .Render "tags-list" }}
     </section>
     {{- if .Site.Params.Giscus.Repo }}
     <section class="comments">
@@ -34,14 +25,14 @@
 {{- partial "suggestion-reading.html" . -}}
 <div class="affix">
 <section class="toc">
-    <h3 class="title">TOC</h3>
+    <h3 class="title">{{ i18n "toc" }}</h3>
     {{ .TableOfContents }}
 </section>
 
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{- if $related }}
 <section>
-    <h3>Related Post</h3>
+    <h3>{{ i18n "related-post" }}</h3>
     {{ with $related }}
     <ul>
         {{ range . }}

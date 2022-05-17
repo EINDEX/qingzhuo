@@ -1,0 +1,27 @@
+<section class="header">
+  <section class="title-area">
+    {{ if .Params.series }}
+    {{ $name := .Params.series }}
+        <a class="series" href="/series/{{$name | urlize}}">{{ i18n $name }}</a>
+    {{ end }}
+
+    {{ if eq .Kind "term" }}<span>{{ .Data.Singular | humanize }}</span>{{end}}
+    <h1 class="title">   
+      <a href="{{ .RelPermalink }}/"
+        >{{.Title }}</a
+      >
+    </h1>
+  </section>
+{{ if in "term taxonomy" .Kind }}{{ else }}
+  <section class="meta-area">
+    {{ if .Date }}
+    <span>{{ partial "fa-icon" "far fa-calendar-days"}} <time>{{ .Date | time.Format ":date_medium" }}</time></span>
+    {{ end }}
+    {{ if .Params.categories }}
+    {{ $name :=  .Params.categories }}
+    <a class="categories" href="/categories/{{$name | urlize}}">{{ partial "fa-icon" "fa-solid fa-inbox"}} {{ $name }}</a>
+    {{ end }}
+    <span>{{ partial "fa-icon" "fas fa-clock"}} {{ .ReadingTime }} {{ i18n "mins" }}</span>
+</section>
+{{ end}}
+</section>

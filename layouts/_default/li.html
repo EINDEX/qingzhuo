@@ -1,22 +1,9 @@
 <li>
     <article>
-        <section class="header">
-            <section class="title-area">
-                <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-                {{ .Render "categories" }}
-            </section>
-            <section class="meta-area">
-                {{ if .Date }}
-                <time>{{ .Date | time.Format ":date_medium" }}</time>
-                {{ end }}
-                <span class="delimiter"></span>
-                {{ .Render "tag" }}
-            </section>
-        </section>
-        <section class="main">
+        {{ .Render "post-header" }}
+        <section class="main" onclick="location.href={{ .RelPermalink }}">
             {{ .Summary }}
-            <a class="-mx-1 font-medium" href="{{ .RelPermalink }}">Read more →</a>
+            <p><a class="-mx-3 font-sm" href="{{ .RelPermalink }}">Read more →</a></p>
         </section>
-        
     </article>
 </li>

@@ -1,0 +1,11 @@
+archive: "Archive"
+series: "Series"
+category: "Category"
+tags: "Tags"
+links: "Links"
+about: "About"
+suggestion: "Suggesiton Posts"
+toc: "Table of Contents"
+related-post: "Releated Posts"
+expire-warning: 'Notice: This post is updated at ${daysAgo} ago, the content may have been changed.'
+mins: "mins"

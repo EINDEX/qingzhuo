@@ -1,5 +1,5 @@
 <section>
-    <h3>Suggestion</h3>
+    <h3>{{i18n "suggestion"}}</h3>
     {{ $related :=  (where .Site.RegularPages "Type" "in" site.Params.mainSections) | shuffle | first 10 }}
     {{ with $related }}
     <ul class="list">

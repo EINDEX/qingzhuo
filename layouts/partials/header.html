@@ -8,20 +8,12 @@
             alt="Workflow"
         /><span class="site-name">{{ .Site.Title }}</span></a>
       </li>
-      {{ range (where .Site.Menus.navbar.ByWeight "Weight" "ge" 0) }}
-      <li class="button">
-        <a
-          href="{{ .URL }}"
-          >{{ .Name }}</a
-        >
-      </li>
-      {{ end }}
       <li class="delimiter"></li>
-      {{ range (where .Site.Menus.navbar.ByWeight "Weight" "lt" 0) }}
+      {{ range .Site.Menus.navbar }}
       <li class="button">
         <a
           href="{{ .URL }}"
-          >{{ .Name }}</a
+          >{{.Pre}} {{ i18n .Identifier . }} {{.Post}}</a
         >
       </li>
       {{ end }}

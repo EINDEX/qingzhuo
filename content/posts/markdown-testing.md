@@ -3,8 +3,8 @@ title: "Markdown Testing"
 date: 1970-01-01T00:00:00+00:00
 draft: true
 latex: true
-categoies:
-series:
+categories: testing
+series: markdown-testing
 tags: [markdown, testing] 
 ---
 

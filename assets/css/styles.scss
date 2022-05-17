@@ -1,7 +1,15 @@
 @import "node_modules/tailwindcss/base";
 @import "node_modules/tailwindcss/components";
 @import "node_modules/tailwindcss/utilities";
-@import "node_modules/heti/lib/heti";
+
+@import "node_modules/~@fortawesome/fontawesome-free/css/fontawesome.css";
+@import "node_modules/~@fortawesome/fontawesome-free/css/solid.css";
+@import "node_modules/~@fortawesome/fontawesome-free/css/brands.css";
+@import "node_modules/~@fortawesome/fontawesome-free/css/regular.css";
+// @import '~@fortawesome/fontawesome-free/scss/solid';
+// @import '~@fortawesome/fontawesome-free/scss/brands';
+// @import '~@fortawesome/fontawesome-free/scss/regular';
+
 @import "scss/layout.scss";
 @import "scss/article.scss";
 @import "scss/pagination.scss";

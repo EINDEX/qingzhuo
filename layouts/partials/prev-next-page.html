@@ -1,0 +1,28 @@
+{{ if .Params.series }}
+    {{ $series := .Site.Taxonomies.series }}
+    {{ range $key, $value := $series }}
+    {{if eq $key $.Params.series }}
+        {{ $pages := $value.Pages }}
+        {{- $.Scratch.Set "curPosition" 0 }}
+        {{- $.Scratch.Set "index" 0 }}
+        {{- range $pages }}
+        {{- if eq $ . }}
+            {{- $.Scratch.Set "curPosition" ($.Scratch.Get "index") }}
+        {{- end }}
+        {{- $.Scratch.Add "index" 1 }}
+        {{- end }}
+        {{- $next := (index $pages (add ($.Scratch.Get "curPosition") 1)) }}
+        {{- $prev := (index $pages (sub ($.Scratch.Get "curPosition") 1)) }}
+        <div class="prev-next">
+            {{- with $prev }}
+            <a class="prev" href="{{ .Permalink }}">← {{ .Title }}</a>
+            {{- end }}
+            <span class="delimiter"></span>
+            {{- with $next }}
+            <a class="next" href="{{ .Permalink }}">{{ .Title }} →</a>
+            {{- end }}
+        </div>
+    {{ end }}
+    {{end}}
+{{end}}
+

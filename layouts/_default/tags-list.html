@@ -1,0 +1,8 @@
+{{ if .Params.tags }}    
+    <div class="tags">
+    {{ partial "fa-icon" "fa-solid fa-tags"}}
+    {{ range .Params.tags }}
+     <span class="tag"><a href="/tags/{{.}}">{{ . }}</a></span>
+    {{ end }}
+    </div>
+{{ end }}
