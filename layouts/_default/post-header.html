@@ -1,14 +1,15 @@
 <section class="header">
   <section class="title-area">
+    {{ .Params.series}}
     {{ if .Params.series }}
     {{ $name := .Params.series }}
-        <a class="series" href="/series/{{$name | urlize}}">{{ i18n $name }}</a>
+        <a class="series" href="{{ relLangURL (printf "/series/%s" $name | lower | urlize) }}">{{ i18n $name }}</a>
     {{ end }}
 
-    {{ if eq .Kind "term" }}<span>{{ .Data.Singular | humanize }}</span>{{end}}
+    {{ if eq .Kind "term" }}<span>{{ i18n .Data.Singular }}</span>{{end}}
     <h1 class="title">   
       <a href="{{ .RelPermalink }}/"
-        >{{.Title }}</a
+        >{{i18n (urlize .Title) | default (humanize .Title)}}</a
       >
     </h1>
   </section>
@@ -19,7 +20,7 @@
     {{ end }}
     {{ if .Params.categories }}
     {{ $name :=  .Params.categories }}
-    <a class="categories" href="/categories/{{$name | urlize}}">{{ partial "fa-icon" "fa-solid fa-inbox"}} {{ $name }}</a>
+    <a class="categories" href="{{ relLangURL (printf "/categories/%s" $name | lower | urlize) }}">{{ partial "fa-icon" "fa-solid fa-inbox"}} {{ $name }}</a>
     {{ end }}
     <span>{{ partial "fa-icon" "fas fa-clock"}} {{ .ReadingTime }} {{ i18n "mins" }}</span>
 </section>

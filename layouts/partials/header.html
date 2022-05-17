@@ -12,7 +12,7 @@
       {{ range .Site.Menus.navbar }}
       <li class="button">
         <a
-          href="{{ .URL }}"
+          href="{{ absLangURL .URL }}"
           >{{.Pre}} {{ i18n .Identifier . }} {{.Post}}</a
         >
       </li>

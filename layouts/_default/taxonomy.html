@@ -22,13 +22,13 @@
 {{ .Render "post-header" }}
 {{ range $key,$value := .Data.Terms }}
 <section class="taxonomy-list">
-    <h3 class="title"><a href="/{{ $name }}/{{ $key | urlize }}">{{ $key | humanize }}</a></h3>
+    <h3 class="title"><a href="{{ relLangURL (printf "/%s/%s" $name $key | lower | urlize) }}">{{ $key | humanize }}</a></h3>
     <ul class="post-list">
         {{ range $value.Pages | first 5 }}
             <li><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
         {{ end }}
     </ul>
-    <a class="more" href="/{{ $name }}/{{ $key | urlize }}">More >></a>
+    <a class="more" href="{{ relLangURL (printf "/%s/%s" $name $key | lower | urlize) }}">More >></a>
 </section>
 {{ end }}
 {{ end }}

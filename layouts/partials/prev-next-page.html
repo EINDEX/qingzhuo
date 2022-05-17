@@ -15,11 +15,11 @@
         {{- $prev := (index $pages (sub ($.Scratch.Get "curPosition") 1)) }}
         <div class="prev-next">
             {{- with $prev }}
-            <a class="prev" href="{{ .Permalink }}">← {{ .Title }}</a>
+            <a class="prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>
             {{- end }}
             <span class="delimiter"></span>
             {{- with $next }}
-            <a class="next" href="{{ .Permalink }}">{{ .Title }} →</a>
+            <a class="next" href="{{ .RelPermalink }}">{{ .Title }} →</a>
             {{- end }}
         </div>
     {{ end }}
