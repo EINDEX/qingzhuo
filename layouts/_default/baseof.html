@@ -3,6 +3,7 @@
     <head>
     {{- partial "head.html" . -}}
     {{- block "head" . }}{{- end }}
+    {{ template "_internal/twitter_cards.html" . }}
     {{- partial "microsoft-clarity.html" . -}}
     </head>
     <body>
@@ -19,5 +20,5 @@
     </body>
     {{- partial "busuanzi.html" . -}}
     {{- partial "baidu-analytics.html" . -}}
-    {{- partial "google-analytics.html" . -}}
+    {{ template "_internal/google_analytics.html" . }}
 </html>
