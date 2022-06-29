@@ -7,6 +7,9 @@ title = "QingZhuo Hugo theme"
 # baseURL = "https://eindex.github.io/qingzhuo"
 # theme = "qingzhuo" # uncomment when you using as theme mode.
 
+## Google Analytics
+GoogleAnalytics = 'G-SR36ZS0R52'
+
 paginate = 10 # default page size
 
 hasCJKLanguage = true # CJK support
@@ -50,6 +53,7 @@ url = "/archive/"
 weight = 1
 
 
+
 [params]
 # Time to start show outdate warning, 0 to close.
 outdateingWarningDays = 30
@@ -60,8 +64,8 @@ baiduAnalytics = ''
 ## Microsoft clarify
 microsoftClarity = ''
 
-## Google Analytics
-googleAnalytics = ''
+## deprecated: please using Site.GoogleAnalytics https://gohugo.io/templates/internal/#google-analytics
+# googleAnalytics = '' 
 
 ## ICP infomation China mainland only
 ICPNumbers = ''
