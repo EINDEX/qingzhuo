@@ -8,7 +8,7 @@ title = "QingZhuo Hugo theme"
 # theme = "qingzhuo" # uncomment when you using as theme mode.
 
 ## Google Analytics
-GoogleAnalytics = 'G-SR36ZS0R52'
+GoogleAnalytics = 'G-9WCVMESGP2'
 
 paginate = 10 # default page size
 
